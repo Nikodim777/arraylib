@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1595414154 source:c:\users\ÿ\documents\myprojects\arraylib\arraydlltest\main.c
+	<stdio.h>
+	<locale.h>
+	<stdlib.h>
+	<math.h>
+	<complex.h>
+	<assert.h>
+	"array.h"
+
