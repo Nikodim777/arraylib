@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1595344602 source:c:\users\ÿ\documents\myprojects\arraylib\arraylib\main.c
+	<stdio.h>
+	<stdlib.h>
+	<memory.h>
+	<complex.h>
+	"array.h"
+
+1595416384 c:\users\ÿ\documents\myprojects\arraylib\arraylib\array.h
+	<memory.h>
+
