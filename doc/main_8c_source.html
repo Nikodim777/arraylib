@@ -1,0 +1,344 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Р‘РёР±Р»РёРѕС‚РµРєР° РґР»СЏ СЂР°Р±РѕС‚С‹ СЃ РјР°СЃСЃРёРІР°РјРё: РСЃС…РѕРґРЅС‹Р№ С„Р°Р№Р» main.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Р‘РёР±Р»РёРѕС‚РµРєР° РґР»СЏ СЂР°Р±РѕС‚С‹ СЃ РјР°СЃСЃРёРІР°РјРё
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">РќР°Р±РѕСЂ С„СѓРЅРєС†РёР№ Рё РјР°РєСЂРѕСЃРѕРІ РґР»СЏ СЂР°Р±РѕС‚С‹ СЃ РјР°СЃСЃРёРІР°РјРё</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- РЎРѕР·РґР°РЅРѕ СЃРёСЃС‚РµРјРѕР№ Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'РџРѕРёСЃРє');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','РџРѕРёСЃРє');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_e6bb53534ac0e427887cf7a94c0c004e.html">C:</a></li><li class="navelem"><a class="el" href="dir_8ceffd4ee35c3518d4e8bdc7e638efe8.html">Users</a></li><li class="navelem"><a class="el" href="dir_deccb1dc182f7c075dfa36a9620df24e.html">СЏ</a></li><li class="navelem"><a class="el" href="dir_d169b5213665ab8604c1751cafa520c7.html">Documents</a></li><li class="navelem"><a class="el" href="dir_fffe34da26e7d217bec993d2b673b8ca.html">MyProjects</a></li><li class="navelem"><a class="el" href="dir_a5e87226998ef676a8ed94cbbbd61aed.html">arraylib</a></li><li class="navelem"><a class="el" href="dir_94a6e9d4fae78453e71017a19520da24.html">arraylib</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">main.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="main_8c.html">РЎРј. РґРѕРєСѓРјРµРЅС‚Р°С†РёСЋ.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*Библиотека для упрощения работы с массивами на языке си</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">//slice(mas,beg,end,step)</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//filter(mas,func)</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//merge(mas1,mas2,filter)</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">//fill(mas,func)</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">//all(mas,func)</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">//any(mas,func)</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">//count(mas,func)</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">//map(mas,func)</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">//reduce(mas,func)</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">//mprintf(mas,func)*/</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;memory.h&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;complex.h&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="array_8h.html">array.h</a>&quot;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="main_8c.html#ad37a4228146958633b9805f790cf3beb">   19</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="main_8c.html#ad37a4228146958633b9805f790cf3beb">printInt</a>(<span class="keyword">const</span> <span class="keywordtype">void</span> *arg)</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;{</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    printf(<span class="stringliteral">&quot;%d\t&quot;</span>, *(<span class="keywordtype">int</span>*)arg);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;}</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="main_8c.html#a753bc769acc47dd8b4ef421adf531c45">   23</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="main_8c.html#a753bc769acc47dd8b4ef421adf531c45">printFlt</a>(<span class="keyword">const</span> <span class="keywordtype">void</span> *arg)</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;{</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    printf(<span class="stringliteral">&quot;%.3f\t&quot;</span>, *(<span class="keywordtype">float</span>*)arg);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;}</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="main_8c.html#a4785727077d4aabae6fe6e88ffd59f88">   27</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="main_8c.html#a4785727077d4aabae6fe6e88ffd59f88">printDbl</a>(<span class="keyword">const</span> <span class="keywordtype">void</span> *arg)</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;{</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    printf(<span class="stringliteral">&quot;%.6f\t&quot;</span>, *(<span class="keywordtype">double</span>*)arg);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;}</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="main_8c.html#a1bea3bf2b8916c4bafef5fa858bb2b47">   31</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="main_8c.html#a1bea3bf2b8916c4bafef5fa858bb2b47">printExp</a>(<span class="keyword">const</span> <span class="keywordtype">void</span> *arg)</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;{</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    printf(<span class="stringliteral">&quot;%.3e\t&quot;</span>, *(<span class="keywordtype">double</span>*)arg);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;}</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="main_8c.html#a0362bbd5c092e74a881637cebad0c16e">   35</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="main_8c.html#a0362bbd5c092e74a881637cebad0c16e">printCmplx</a>(<span class="keyword">const</span> <span class="keywordtype">void</span> *arg)</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;{</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    printf(<span class="stringliteral">&quot;%.3f+%.3f*i\t&quot;</span>, creal(*(<span class="keywordtype">double</span> complex*)arg), cimag(*(<span class="keywordtype">double</span> complex*)arg));</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;}</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="main_8c.html#a8e42660f16df4fb9c8a89a57602c4bfa">   40</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="main_8c.html#a8e42660f16df4fb9c8a89a57602c4bfa">aprint</a>(<span class="keyword">const</span> <span class="keywordtype">void</span> *mas, <span class="keyword">const</span> <a class="code" href="array_8h.html#a6aa2d87d09049793a21a7eb3ce83ed6b">size_tp</a> szEl, <span class="keyword">const</span> <a class="code" href="array_8h.html#a85bed353cccbcc37f36f8f196ed33ca1">largeSize_tp</a> n, <span class="keyword">const</span> <a class="code" href="array_8h.html#a85bed353cccbcc37f36f8f196ed33ca1">largeSize_tp</a> m, <span class="keyword">const</span> <span class="keywordtype">char</span> *title, <span class="keywordtype">void</span> (*print)(<span class="keyword">const</span> <span class="keywordtype">void</span> *arg))</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;{</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">long</span> <span class="keywordtype">long</span> i, j;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    printf(<span class="stringliteral">&quot;%s\n&quot;</span>, title);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordflow">for</span>(i = 0; i &lt; n; i++) {</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="keywordflow">for</span>(j = 0; j &lt; m; j++, mas += szEl) {</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            print(mas);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        }</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        printf(<span class="stringliteral">&quot;\n&quot;</span>);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    }</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;}</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="main_8c.html#aad65d387ed9f1429aa435146294ebd11">   56</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="main_8c.html#aad65d387ed9f1429aa435146294ebd11">step</a>(<span class="keywordtype">void</span>* masEl, <a class="code" href="array_8h.html#a85bed353cccbcc37f36f8f196ed33ca1">largeSize_tp</a> num)</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;{</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    *(<span class="keywordtype">int</span>*)masEl = (<span class="keywordtype">int</span>)num;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;}</div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="main_8c.html#a6ac581ded1c8017f8d7af4b73d5e9752">   60</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="main_8c.html#a6ac581ded1c8017f8d7af4b73d5e9752">stepTwc</a>(<span class="keywordtype">void</span>* masEl, <a class="code" href="array_8h.html#a85bed353cccbcc37f36f8f196ed33ca1">largeSize_tp</a> num)</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;{</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    *(<span class="keywordtype">int</span>*)masEl = (<span class="keywordtype">int</span>)num * 2;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;}</div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="main_8c.html#ab6ee9cca5ea96c0a9293ed13c8bde4de">   64</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="main_8c.html#ab6ee9cca5ea96c0a9293ed13c8bde4de">setRnd</a>(<span class="keywordtype">void</span>* masEl, <a class="code" href="array_8h.html#a85bed353cccbcc37f36f8f196ed33ca1">largeSize_tp</a> num)</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;{</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    *(<span class="keywordtype">int</span>*)masEl = rand() % 100;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;}</div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="main_8c.html#aa4831e4671e5762ed5807b7acd5e7495">   68</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="main_8c.html#aa4831e4671e5762ed5807b7acd5e7495">setDblRnd</a>(<span class="keywordtype">void</span>* masEl, <a class="code" href="array_8h.html#a85bed353cccbcc37f36f8f196ed33ca1">largeSize_tp</a> num)</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;{</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    *(<span class="keywordtype">double</span>*)masEl = (rand() % 10000) / 100;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;}</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="main_8c.html#a96ad93c819618431386cc7f073fd8bfd">   73</a></span>&#160;<span class="keywordtype">void</span> *<a class="code" href="main_8c.html#a96ad93c819618431386cc7f073fd8bfd">setArr</a>(<span class="keywordtype">void</span> *mas, <span class="keyword">const</span> <a class="code" href="array_8h.html#a6aa2d87d09049793a21a7eb3ce83ed6b">size_tp</a> szEl, <span class="keyword">const</span> <a class="code" href="array_8h.html#a85bed353cccbcc37f36f8f196ed33ca1">largeSize_tp</a> size, <span class="keywordtype">void</span> (*setEl)(<span class="keywordtype">void</span>* masEl, <a class="code" href="array_8h.html#a85bed353cccbcc37f36f8f196ed33ca1">largeSize_tp</a> num))</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;{</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordtype">long</span> <span class="keywordtype">long</span> i;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordtype">void</span> *tmpptr = mas;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordflow">for</span>(i = 0; i &lt; size; i++, mas += szEl) {</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        setEl(mas, i);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    }</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordflow">return</span> tmpptr;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;}</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="main_8c.html#aea79df069c40cf61e56755b56afda530">   83</a></span>&#160;<span class="keywordtype">void</span> *<a class="code" href="main_8c.html#aea79df069c40cf61e56755b56afda530">setArrNew</a>(<span class="keywordtype">void</span> *mas, <span class="keywordtype">void</span> *newmas, <span class="keyword">const</span> <a class="code" href="array_8h.html#a6aa2d87d09049793a21a7eb3ce83ed6b">size_tp</a> szEl, <span class="keyword">const</span> <a class="code" href="array_8h.html#a85bed353cccbcc37f36f8f196ed33ca1">largeSize_tp</a> size, <span class="keywordtype">void</span> (*setEl)(<span class="keywordtype">void</span>* masEl, <a class="code" href="array_8h.html#a85bed353cccbcc37f36f8f196ed33ca1">largeSize_tp</a> num))</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;{</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordtype">long</span> <span class="keywordtype">long</span> i;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordtype">void</span> *tmpptr = newmas;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    memcpy(newmas, mas, szEl * size);</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordflow">for</span>(i = 0; i &lt; size; i++, newmas += szEl) {</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        setEl(newmas, i);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    }</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordflow">return</span> tmpptr;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;}</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
+<div class="line"><a name="l00101"></a><span class="lineno"><a class="line" href="main_8c.html#a9288397de72d488e524d57e5bc493419">  101</a></span>&#160;<span class="keywordtype">void</span> *<a class="code" href="main_8c.html#a9288397de72d488e524d57e5bc493419">mapArr</a>(<span class="keywordtype">void</span> *mas, <span class="keyword">const</span> <a class="code" href="array_8h.html#a6aa2d87d09049793a21a7eb3ce83ed6b">size_tp</a> szEl, <span class="keyword">const</span> <a class="code" href="array_8h.html#a85bed353cccbcc37f36f8f196ed33ca1">largeSize_tp</a> size, <span class="keywordtype">void</span> (*procEl)(<span class="keywordtype">void</span>* masEl))</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;{</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keywordtype">long</span> <span class="keywordtype">long</span> i;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="keywordtype">void</span> *tmpptr = mas;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keywordflow">for</span>(i = 0; i &lt; size; i++, mas += szEl) {</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        procEl(mas);</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    }</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="keywordflow">return</span> tmpptr;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;}</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
+<div class="line"><a name="l00111"></a><span class="lineno"><a class="line" href="main_8c.html#a0eec773586d9c898ab063e40b1a10184">  111</a></span>&#160;<span class="keywordtype">void</span> *<a class="code" href="main_8c.html#a0eec773586d9c898ab063e40b1a10184">mapArrNew</a>(<span class="keywordtype">void</span> *mas, <span class="keywordtype">void</span> *newmas, <span class="keyword">const</span> <a class="code" href="array_8h.html#a6aa2d87d09049793a21a7eb3ce83ed6b">size_tp</a> szEl, <span class="keyword">const</span> <a class="code" href="array_8h.html#a85bed353cccbcc37f36f8f196ed33ca1">largeSize_tp</a> size, <span class="keywordtype">void</span> (*procEl)(<span class="keywordtype">void</span>* masEl))</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;{</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="keywordtype">long</span> <span class="keywordtype">long</span> i;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="keywordtype">void</span> *tmpptr = newmas;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160; </div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    memcpy(newmas, mas, szEl * size);</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <span class="keywordflow">for</span>(i = 0; i &lt; size; i++, newmas += szEl) {</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        procEl(newmas);</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    }</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160; </div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <span class="keywordflow">return</span> tmpptr;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;}</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160; </div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160; </div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160; </div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160; </div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160; </div>
+<div class="line"><a name="l00128"></a><span class="lineno"><a class="line" href="main_8c.html#a10540cabf96f121768746acd36f07b69">  128</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="main_8c.html#a10540cabf96f121768746acd36f07b69">sumArrEl</a>(<span class="keywordtype">void</span> *acc, <span class="keyword">const</span> <span class="keywordtype">void</span> *masEl)</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;{</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    *(<span class="keywordtype">int</span>*)acc += *(<span class="keywordtype">int</span>*)masEl;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;}</div>
+<div class="line"><a name="l00132"></a><span class="lineno"><a class="line" href="main_8c.html#a31f845a7f56b836f3449b5e88efccae2">  132</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="main_8c.html#a31f845a7f56b836f3449b5e88efccae2">sumDblArrEl</a>(<span class="keywordtype">void</span> *acc, <span class="keyword">const</span> <span class="keywordtype">void</span> *masEl)</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;{</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    *(<span class="keywordtype">double</span>*)acc += *(<span class="keywordtype">double</span>*)masEl;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;}</div>
+<div class="line"><a name="l00136"></a><span class="lineno"><a class="line" href="main_8c.html#a08e5465f1d406d0b65a78d466c4d473d">  136</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="main_8c.html#a08e5465f1d406d0b65a78d466c4d473d">mulArrEl</a>(<span class="keywordtype">void</span> *acc, <span class="keyword">const</span> <span class="keywordtype">void</span> *masEl)</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;{</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    *(<span class="keywordtype">int</span>*)acc *= *(<span class="keywordtype">int</span>*)masEl;</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;}</div>
+<div class="line"><a name="l00140"></a><span class="lineno"><a class="line" href="main_8c.html#a596499c6fdd31b4f5e49023c6a341d68">  140</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="main_8c.html#a596499c6fdd31b4f5e49023c6a341d68">mulDblArrEl</a>(<span class="keywordtype">void</span> *acc, <span class="keyword">const</span> <span class="keywordtype">void</span> *masEl)</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;{</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    *(<span class="keywordtype">double</span>*)acc *= *(<span class="keywordtype">double</span>*)masEl;</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;}</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160; </div>
+<div class="line"><a name="l00145"></a><span class="lineno"><a class="line" href="main_8c.html#a923ecad3d365d547fac1d67b73087cb4">  145</a></span>&#160;<span class="keywordtype">void</span> *<a class="code" href="main_8c.html#a923ecad3d365d547fac1d67b73087cb4">reduceArr</a>(<span class="keyword">const</span> <span class="keywordtype">void</span> *mas, <span class="keyword">const</span> <a class="code" href="array_8h.html#a6aa2d87d09049793a21a7eb3ce83ed6b">size_tp</a> szEl, <span class="keyword">const</span> <a class="code" href="array_8h.html#a85bed353cccbcc37f36f8f196ed33ca1">largeSize_tp</a> size, <span class="keywordtype">void</span> *acc, <span class="keywordtype">void</span> (*procEl)(<span class="keywordtype">void</span> *acc, <span class="keyword">const</span> <span class="keywordtype">void</span> *masEl))</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;{</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    <span class="keywordtype">long</span> <span class="keywordtype">long</span> i;</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    <span class="keywordflow">for</span>(i = 0; i &lt; size; i++, mas += szEl) {</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        procEl(acc, mas);</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    }</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    <span class="keywordflow">return</span> acc;</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;}</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160; </div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160; </div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160; </div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160; </div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160; </div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160; </div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160; </div>
+<div class="line"><a name="l00160"></a><span class="lineno"><a class="line" href="main_8c.html#a744a46f64be96c5e7444d82fc2dbc647">  160</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="main_8c.html#a744a46f64be96c5e7444d82fc2dbc647">Appropriate</a>(<span class="keyword">const</span> <span class="keywordtype">void</span> *mas, <span class="keyword">const</span> <a class="code" href="array_8h.html#a6aa2d87d09049793a21a7eb3ce83ed6b">size_tp</a> szEl, <span class="keyword">const</span> <a class="code" href="array_8h.html#a85bed353cccbcc37f36f8f196ed33ca1">largeSize_tp</a> size, <span class="keyword">enum</span> <a class="code" href="array_8h.html#adefa58bb66a98146754068591a1b67e1">typeAppr</a> type, <span class="keywordtype">int</span> (*checkEl)(<span class="keyword">const</span> <span class="keywordtype">void</span> *masEl))</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;{</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    <span class="keywordtype">long</span> <span class="keywordtype">long</span> i;</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    <span class="keywordtype">long</span> <span class="keywordtype">long</span> tmp;</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160; </div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    <span class="keywordflow">if</span>(type == <a class="code" href="array_8h.html#adefa58bb66a98146754068591a1b67e1a09a63ebf93da587b7c2ccdf9b2cd98d8">ALL_APPR</a>) {</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;        tmp = 1;</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;        tmp = 0;</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    }</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160; </div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    <span class="keywordflow">for</span>(i = 0; i &lt; size; i++, mas += szEl)</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;        <span class="keywordflow">if</span>(type == <a class="code" href="array_8h.html#adefa58bb66a98146754068591a1b67e1a09a63ebf93da587b7c2ccdf9b2cd98d8">ALL_APPR</a>) {</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;            tmp &amp;= checkEl(mas);</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;        } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(type == <a class="code" href="array_8h.html#adefa58bb66a98146754068591a1b67e1a2d1eba698b2c22a31e9f017645d3f919">ANY_APPR</a>) {</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;            tmp |= checkEl(mas);</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;        } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(type == <a class="code" href="array_8h.html#adefa58bb66a98146754068591a1b67e1acc6015f917f37533479cab1a1b05d069">CNT_APPR</a>) {</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;            tmp += checkEl(mas);</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;        }</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160; </div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    <span class="keywordflow">return</span> tmp;</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;}</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160; </div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160; </div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160; </div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160; </div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160; </div>
+<div class="line"><a name="l00187"></a><span class="lineno"><a class="line" href="main_8c.html#a3a40d0af03a2b36772b435e48d839834">  187</a></span>&#160;<span class="keywordtype">void</span> *<a class="code" href="main_8c.html#a3a40d0af03a2b36772b435e48d839834">filterArr</a>(<span class="keywordtype">void</span> *mas, <span class="keywordtype">void</span> *newmas, <span class="keyword">const</span> <a class="code" href="array_8h.html#a6aa2d87d09049793a21a7eb3ce83ed6b">size_tp</a> szEl, <span class="keyword">const</span> <a class="code" href="array_8h.html#a85bed353cccbcc37f36f8f196ed33ca1">largeSize_tp</a> size, <a class="code" href="array_8h.html#a85bed353cccbcc37f36f8f196ed33ca1">largeSize_tp</a> *newsize, <span class="keywordtype">int</span> (*checkEl)(<span class="keyword">const</span> <span class="keywordtype">void</span> *masEl))</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;{</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    <span class="keywordtype">long</span> <span class="keywordtype">long</span> i;</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    <span class="keywordtype">void</span> *tmpptr = newmas;</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    *newsize = 0;</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160; </div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    <span class="keywordflow">for</span>(i = 0; i &lt; size; i++, mas += szEl)</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;        <span class="keywordflow">if</span>(checkEl(mas) == 1) {</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;            memcpy(newmas, mas, szEl);</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;            newmas += szEl;</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;            (*newsize)++;</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;        }</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160; </div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    newmas = tmpptr;</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    newmas = realloc(newmas, szEl * (*newsize));</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    <span class="keywordflow">return</span> newmas;</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;}</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160; </div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160; </div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160; </div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160; </div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160; </div>
+<div class="line"><a name="l00209"></a><span class="lineno"><a class="line" href="main_8c.html#a654a23b5db77a15079ee9f8600210cc8">  209</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="main_8c.html#a654a23b5db77a15079ee9f8600210cc8">sumArraysEl</a>(<span class="keyword">const</span> <span class="keywordtype">void</span> *masEl1, <span class="keyword">const</span> <span class="keywordtype">void</span> *masEl2, <span class="keywordtype">void</span> *resEl, <a class="code" href="array_8h.html#a85bed353cccbcc37f36f8f196ed33ca1">largeSize_tp</a> num)</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;{</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    *(<span class="keywordtype">double</span>*)resEl = (*(<span class="keywordtype">double</span>*)masEl1) + (*(<span class="keywordtype">double</span>*)masEl2);</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;}</div>
+<div class="line"><a name="l00213"></a><span class="lineno"><a class="line" href="main_8c.html#a789c97469da4a9dafcde3a9b47b9f655">  213</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="main_8c.html#a789c97469da4a9dafcde3a9b47b9f655">mulArraysEl</a>(<span class="keyword">const</span> <span class="keywordtype">void</span> *masEl1, <span class="keyword">const</span> <span class="keywordtype">void</span> *masEl2, <span class="keywordtype">void</span> *resEl, <a class="code" href="array_8h.html#a85bed353cccbcc37f36f8f196ed33ca1">largeSize_tp</a> num)</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;{</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    *(<span class="keywordtype">double</span>*)resEl = (*(<span class="keywordtype">double</span>*)masEl1) * (*(<span class="keywordtype">double</span>*)masEl2);</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;}</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160; </div>
+<div class="line"><a name="l00218"></a><span class="lineno"><a class="line" href="main_8c.html#ad3d6fd617e98a39197b01bc2471bfe0e">  218</a></span>&#160;<span class="keywordtype">void</span> *<a class="code" href="main_8c.html#ad3d6fd617e98a39197b01bc2471bfe0e">procArrays</a>(<span class="keywordtype">void</span> *mas1, <span class="keywordtype">void</span> *mas2, <span class="keywordtype">void</span> *newmas, <span class="keyword">const</span> <a class="code" href="array_8h.html#a6aa2d87d09049793a21a7eb3ce83ed6b">size_tp</a> szEl, <span class="keyword">const</span> <a class="code" href="array_8h.html#a85bed353cccbcc37f36f8f196ed33ca1">largeSize_tp</a> size,</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;                 <span class="keywordtype">void</span> (*procEl)(<span class="keyword">const</span> <span class="keywordtype">void</span> *masEl1, <span class="keyword">const</span> <span class="keywordtype">void</span> *masEl2, <span class="keywordtype">void</span> *resEl, <a class="code" href="array_8h.html#a85bed353cccbcc37f36f8f196ed33ca1">largeSize_tp</a> num))</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;{</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    <span class="keywordtype">long</span> <span class="keywordtype">long</span> i;</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    <span class="keywordtype">void</span> *tmpptr = newmas;</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160; </div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    <span class="keywordflow">for</span>(i = 0; i &lt; size; i++, mas1 += szEl, mas2 += szEl, newmas += szEl) {</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;        procEl(mas1, mas2, newmas, i);</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;    }</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160; </div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;    <span class="keywordflow">return</span> tmpptr;</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;}</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160; </div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160; </div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="amain_8c_html_a8e42660f16df4fb9c8a89a57602c4bfa"><div class="ttname"><a href="main_8c.html#a8e42660f16df4fb9c8a89a57602c4bfa">aprint</a></div><div class="ttdeci">void aprint(const void *mas, const size_tp szEl, const largeSize_tp n, const largeSize_tp m, const char *title, void(*print)(const void *arg))</div><div class="ttdef"><b>Definition:</b> <a href="main_8c_source.html#l00040">main.c:40</a></div></div>
+<div class="ttc" id="amain_8c_html_a789c97469da4a9dafcde3a9b47b9f655"><div class="ttname"><a href="main_8c.html#a789c97469da4a9dafcde3a9b47b9f655">mulArraysEl</a></div><div class="ttdeci">void mulArraysEl(const void *masEl1, const void *masEl2, void *resEl, largeSize_tp num)</div><div class="ttdef"><b>Definition:</b> <a href="main_8c_source.html#l00213">main.c:213</a></div></div>
+<div class="ttc" id="amain_8c_html_a9288397de72d488e524d57e5bc493419"><div class="ttname"><a href="main_8c.html#a9288397de72d488e524d57e5bc493419">mapArr</a></div><div class="ttdeci">void * mapArr(void *mas, const size_tp szEl, const largeSize_tp size, void(*procEl)(void *masEl))</div><div class="ttdef"><b>Definition:</b> <a href="main_8c_source.html#l00101">main.c:101</a></div></div>
+<div class="ttc" id="amain_8c_html_a744a46f64be96c5e7444d82fc2dbc647"><div class="ttname"><a href="main_8c.html#a744a46f64be96c5e7444d82fc2dbc647">Appropriate</a></div><div class="ttdeci">int Appropriate(const void *mas, const size_tp szEl, const largeSize_tp size, enum typeAppr type, int(*checkEl)(const void *masEl))</div><div class="ttdef"><b>Definition:</b> <a href="main_8c_source.html#l00160">main.c:160</a></div></div>
+<div class="ttc" id="aarray_8h_html_adefa58bb66a98146754068591a1b67e1a09a63ebf93da587b7c2ccdf9b2cd98d8"><div class="ttname"><a href="array_8h.html#adefa58bb66a98146754068591a1b67e1a09a63ebf93da587b7c2ccdf9b2cd98d8">ALL_APPR</a></div><div class="ttdeci">@ ALL_APPR</div><div class="ttdef"><b>Definition:</b> <a href="array_8h_source.html#l00112">array.h:112</a></div></div>
+<div class="ttc" id="amain_8c_html_a0eec773586d9c898ab063e40b1a10184"><div class="ttname"><a href="main_8c.html#a0eec773586d9c898ab063e40b1a10184">mapArrNew</a></div><div class="ttdeci">void * mapArrNew(void *mas, void *newmas, const size_tp szEl, const largeSize_tp size, void(*procEl)(void *masEl))</div><div class="ttdef"><b>Definition:</b> <a href="main_8c_source.html#l00111">main.c:111</a></div></div>
+<div class="ttc" id="amain_8c_html_a3a40d0af03a2b36772b435e48d839834"><div class="ttname"><a href="main_8c.html#a3a40d0af03a2b36772b435e48d839834">filterArr</a></div><div class="ttdeci">void * filterArr(void *mas, void *newmas, const size_tp szEl, const largeSize_tp size, largeSize_tp *newsize, int(*checkEl)(const void *masEl))</div><div class="ttdef"><b>Definition:</b> <a href="main_8c_source.html#l00187">main.c:187</a></div></div>
+<div class="ttc" id="amain_8c_html_a96ad93c819618431386cc7f073fd8bfd"><div class="ttname"><a href="main_8c.html#a96ad93c819618431386cc7f073fd8bfd">setArr</a></div><div class="ttdeci">void * setArr(void *mas, const size_tp szEl, const largeSize_tp size, void(*setEl)(void *masEl, largeSize_tp num))</div><div class="ttdef"><b>Definition:</b> <a href="main_8c_source.html#l00073">main.c:73</a></div></div>
+<div class="ttc" id="aarray_8h_html_adefa58bb66a98146754068591a1b67e1"><div class="ttname"><a href="array_8h.html#adefa58bb66a98146754068591a1b67e1">typeAppr</a></div><div class="ttdeci">typeAppr</div><div class="ttdef"><b>Definition:</b> <a href="array_8h_source.html#l00111">array.h:111</a></div></div>
+<div class="ttc" id="amain_8c_html_a0362bbd5c092e74a881637cebad0c16e"><div class="ttname"><a href="main_8c.html#a0362bbd5c092e74a881637cebad0c16e">printCmplx</a></div><div class="ttdeci">void printCmplx(const void *arg)</div><div class="ttdef"><b>Definition:</b> <a href="main_8c_source.html#l00035">main.c:35</a></div></div>
+<div class="ttc" id="amain_8c_html_a923ecad3d365d547fac1d67b73087cb4"><div class="ttname"><a href="main_8c.html#a923ecad3d365d547fac1d67b73087cb4">reduceArr</a></div><div class="ttdeci">void * reduceArr(const void *mas, const size_tp szEl, const largeSize_tp size, void *acc, void(*procEl)(void *acc, const void *masEl))</div><div class="ttdef"><b>Definition:</b> <a href="main_8c_source.html#l00145">main.c:145</a></div></div>
+<div class="ttc" id="aarray_8h_html"><div class="ttname"><a href="array_8h.html">array.h</a></div></div>
+<div class="ttc" id="aarray_8h_html_adefa58bb66a98146754068591a1b67e1a2d1eba698b2c22a31e9f017645d3f919"><div class="ttname"><a href="array_8h.html#adefa58bb66a98146754068591a1b67e1a2d1eba698b2c22a31e9f017645d3f919">ANY_APPR</a></div><div class="ttdeci">@ ANY_APPR</div><div class="ttdef"><b>Definition:</b> <a href="array_8h_source.html#l00113">array.h:113</a></div></div>
+<div class="ttc" id="amain_8c_html_a31f845a7f56b836f3449b5e88efccae2"><div class="ttname"><a href="main_8c.html#a31f845a7f56b836f3449b5e88efccae2">sumDblArrEl</a></div><div class="ttdeci">void sumDblArrEl(void *acc, const void *masEl)</div><div class="ttdef"><b>Definition:</b> <a href="main_8c_source.html#l00132">main.c:132</a></div></div>
+<div class="ttc" id="amain_8c_html_a6ac581ded1c8017f8d7af4b73d5e9752"><div class="ttname"><a href="main_8c.html#a6ac581ded1c8017f8d7af4b73d5e9752">stepTwc</a></div><div class="ttdeci">void stepTwc(void *masEl, largeSize_tp num)</div><div class="ttdef"><b>Definition:</b> <a href="main_8c_source.html#l00060">main.c:60</a></div></div>
+<div class="ttc" id="amain_8c_html_a596499c6fdd31b4f5e49023c6a341d68"><div class="ttname"><a href="main_8c.html#a596499c6fdd31b4f5e49023c6a341d68">mulDblArrEl</a></div><div class="ttdeci">void mulDblArrEl(void *acc, const void *masEl)</div><div class="ttdef"><b>Definition:</b> <a href="main_8c_source.html#l00140">main.c:140</a></div></div>
+<div class="ttc" id="amain_8c_html_a753bc769acc47dd8b4ef421adf531c45"><div class="ttname"><a href="main_8c.html#a753bc769acc47dd8b4ef421adf531c45">printFlt</a></div><div class="ttdeci">void printFlt(const void *arg)</div><div class="ttdef"><b>Definition:</b> <a href="main_8c_source.html#l00023">main.c:23</a></div></div>
+<div class="ttc" id="amain_8c_html_a10540cabf96f121768746acd36f07b69"><div class="ttname"><a href="main_8c.html#a10540cabf96f121768746acd36f07b69">sumArrEl</a></div><div class="ttdeci">void sumArrEl(void *acc, const void *masEl)</div><div class="ttdef"><b>Definition:</b> <a href="main_8c_source.html#l00128">main.c:128</a></div></div>
+<div class="ttc" id="amain_8c_html_ab6ee9cca5ea96c0a9293ed13c8bde4de"><div class="ttname"><a href="main_8c.html#ab6ee9cca5ea96c0a9293ed13c8bde4de">setRnd</a></div><div class="ttdeci">void setRnd(void *masEl, largeSize_tp num)</div><div class="ttdef"><b>Definition:</b> <a href="main_8c_source.html#l00064">main.c:64</a></div></div>
+<div class="ttc" id="amain_8c_html_a4785727077d4aabae6fe6e88ffd59f88"><div class="ttname"><a href="main_8c.html#a4785727077d4aabae6fe6e88ffd59f88">printDbl</a></div><div class="ttdeci">void printDbl(const void *arg)</div><div class="ttdef"><b>Definition:</b> <a href="main_8c_source.html#l00027">main.c:27</a></div></div>
+<div class="ttc" id="amain_8c_html_ad3d6fd617e98a39197b01bc2471bfe0e"><div class="ttname"><a href="main_8c.html#ad3d6fd617e98a39197b01bc2471bfe0e">procArrays</a></div><div class="ttdeci">void * procArrays(void *mas1, void *mas2, void *newmas, const size_tp szEl, const largeSize_tp size, void(*procEl)(const void *masEl1, const void *masEl2, void *resEl, largeSize_tp num))</div><div class="ttdef"><b>Definition:</b> <a href="main_8c_source.html#l00218">main.c:218</a></div></div>
+<div class="ttc" id="aarray_8h_html_a85bed353cccbcc37f36f8f196ed33ca1"><div class="ttname"><a href="array_8h.html#a85bed353cccbcc37f36f8f196ed33ca1">largeSize_tp</a></div><div class="ttdeci">unsigned long long largeSize_tp</div><div class="ttdoc">Беззнаковый тип для задания небольших размеров</div><div class="ttdef"><b>Definition:</b> <a href="array_8h_source.html#l00008">array.h:8</a></div></div>
+<div class="ttc" id="amain_8c_html_a1bea3bf2b8916c4bafef5fa858bb2b47"><div class="ttname"><a href="main_8c.html#a1bea3bf2b8916c4bafef5fa858bb2b47">printExp</a></div><div class="ttdeci">void printExp(const void *arg)</div><div class="ttdef"><b>Definition:</b> <a href="main_8c_source.html#l00031">main.c:31</a></div></div>
+<div class="ttc" id="amain_8c_html_a654a23b5db77a15079ee9f8600210cc8"><div class="ttname"><a href="main_8c.html#a654a23b5db77a15079ee9f8600210cc8">sumArraysEl</a></div><div class="ttdeci">void sumArraysEl(const void *masEl1, const void *masEl2, void *resEl, largeSize_tp num)</div><div class="ttdef"><b>Definition:</b> <a href="main_8c_source.html#l00209">main.c:209</a></div></div>
+<div class="ttc" id="amain_8c_html_aea79df069c40cf61e56755b56afda530"><div class="ttname"><a href="main_8c.html#aea79df069c40cf61e56755b56afda530">setArrNew</a></div><div class="ttdeci">void * setArrNew(void *mas, void *newmas, const size_tp szEl, const largeSize_tp size, void(*setEl)(void *masEl, largeSize_tp num))</div><div class="ttdef"><b>Definition:</b> <a href="main_8c_source.html#l00083">main.c:83</a></div></div>
+<div class="ttc" id="amain_8c_html_aa4831e4671e5762ed5807b7acd5e7495"><div class="ttname"><a href="main_8c.html#aa4831e4671e5762ed5807b7acd5e7495">setDblRnd</a></div><div class="ttdeci">void setDblRnd(void *masEl, largeSize_tp num)</div><div class="ttdef"><b>Definition:</b> <a href="main_8c_source.html#l00068">main.c:68</a></div></div>
+<div class="ttc" id="amain_8c_html_aad65d387ed9f1429aa435146294ebd11"><div class="ttname"><a href="main_8c.html#aad65d387ed9f1429aa435146294ebd11">step</a></div><div class="ttdeci">void step(void *masEl, largeSize_tp num)</div><div class="ttdef"><b>Definition:</b> <a href="main_8c_source.html#l00056">main.c:56</a></div></div>
+<div class="ttc" id="amain_8c_html_ad37a4228146958633b9805f790cf3beb"><div class="ttname"><a href="main_8c.html#ad37a4228146958633b9805f790cf3beb">printInt</a></div><div class="ttdeci">void printInt(const void *arg)</div><div class="ttdoc">Предустановленные вспомогательные функции для вывода массива</div><div class="ttdef"><b>Definition:</b> <a href="main_8c_source.html#l00019">main.c:19</a></div></div>
+<div class="ttc" id="aarray_8h_html_adefa58bb66a98146754068591a1b67e1acc6015f917f37533479cab1a1b05d069"><div class="ttname"><a href="array_8h.html#adefa58bb66a98146754068591a1b67e1acc6015f917f37533479cab1a1b05d069">CNT_APPR</a></div><div class="ttdeci">@ CNT_APPR</div><div class="ttdef"><b>Definition:</b> <a href="array_8h_source.html#l00115">array.h:114</a></div></div>
+<div class="ttc" id="aarray_8h_html_a6aa2d87d09049793a21a7eb3ce83ed6b"><div class="ttname"><a href="array_8h.html#a6aa2d87d09049793a21a7eb3ce83ed6b">size_tp</a></div><div class="ttdeci">unsigned char size_tp</div><div class="ttdef"><b>Definition:</b> <a href="array_8h_source.html#l00007">array.h:7</a></div></div>
+<div class="ttc" id="amain_8c_html_a08e5465f1d406d0b65a78d466c4d473d"><div class="ttname"><a href="main_8c.html#a08e5465f1d406d0b65a78d466c4d473d">mulArrEl</a></div><div class="ttdeci">void mulArrEl(void *acc, const void *masEl)</div><div class="ttdef"><b>Definition:</b> <a href="main_8c_source.html#l00136">main.c:136</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+РЎРѕР·РґР°РЅРѕ СЃРёСЃС‚РµРјРѕР№ &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

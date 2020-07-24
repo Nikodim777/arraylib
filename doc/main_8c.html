@@ -1,0 +1,1017 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Библиотека для работы с массивами: Файл main.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Библиотека для работы с массивами
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Набор функций и макросов для работы с массивами</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_e6bb53534ac0e427887cf7a94c0c004e.html">C:</a></li><li class="navelem"><a class="el" href="dir_8ceffd4ee35c3518d4e8bdc7e638efe8.html">Users</a></li><li class="navelem"><a class="el" href="dir_deccb1dc182f7c075dfa36a9620df24e.html">я</a></li><li class="navelem"><a class="el" href="dir_d169b5213665ab8604c1751cafa520c7.html">Documents</a></li><li class="navelem"><a class="el" href="dir_fffe34da26e7d217bec993d2b673b8ca.html">MyProjects</a></li><li class="navelem"><a class="el" href="dir_a5e87226998ef676a8ed94cbbbd61aed.html">arraylib</a></li><li class="navelem"><a class="el" href="dir_94a6e9d4fae78453e71017a19520da24.html">arraylib</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle">
+<div class="title">Файл main.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;memory.h&gt;</code><br />
+<code>#include &lt;complex.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="array_8h_source.html">array.h</a>&quot;</code><br />
+</div>
+<p><a href="main_8c_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:ad37a4228146958633b9805f790cf3beb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#ad37a4228146958633b9805f790cf3beb">printInt</a> (const void *arg)</td></tr>
+<tr class="memdesc:ad37a4228146958633b9805f790cf3beb"><td class="mdescLeft">&#160;</td><td class="mdescRight">����������������� ��������������� ������� ��� ������ �������  <a href="main_8c.html#ad37a4228146958633b9805f790cf3beb">Подробнее...</a><br /></td></tr>
+<tr class="separator:ad37a4228146958633b9805f790cf3beb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a753bc769acc47dd8b4ef421adf531c45"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a753bc769acc47dd8b4ef421adf531c45">printFlt</a> (const void *arg)</td></tr>
+<tr class="separator:a753bc769acc47dd8b4ef421adf531c45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4785727077d4aabae6fe6e88ffd59f88"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a4785727077d4aabae6fe6e88ffd59f88">printDbl</a> (const void *arg)</td></tr>
+<tr class="separator:a4785727077d4aabae6fe6e88ffd59f88"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1bea3bf2b8916c4bafef5fa858bb2b47"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a1bea3bf2b8916c4bafef5fa858bb2b47">printExp</a> (const void *arg)</td></tr>
+<tr class="separator:a1bea3bf2b8916c4bafef5fa858bb2b47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0362bbd5c092e74a881637cebad0c16e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a0362bbd5c092e74a881637cebad0c16e">printCmplx</a> (const void *arg)</td></tr>
+<tr class="separator:a0362bbd5c092e74a881637cebad0c16e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e42660f16df4fb9c8a89a57602c4bfa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a8e42660f16df4fb9c8a89a57602c4bfa">aprint</a> (const void *mas, const <a class="el" href="array_8h.html#a6aa2d87d09049793a21a7eb3ce83ed6b">size_tp</a> szEl, const <a class="el" href="array_8h.html#a85bed353cccbcc37f36f8f196ed33ca1">largeSize_tp</a> n, const <a class="el" href="array_8h.html#a85bed353cccbcc37f36f8f196ed33ca1">largeSize_tp</a> m, const char *title, void(*print)(const void *arg))</td></tr>
+<tr class="separator:a8e42660f16df4fb9c8a89a57602c4bfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad65d387ed9f1429aa435146294ebd11"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#aad65d387ed9f1429aa435146294ebd11">step</a> (void *masEl, <a class="el" href="array_8h.html#a85bed353cccbcc37f36f8f196ed33ca1">largeSize_tp</a> num)</td></tr>
+<tr class="separator:aad65d387ed9f1429aa435146294ebd11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ac581ded1c8017f8d7af4b73d5e9752"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a6ac581ded1c8017f8d7af4b73d5e9752">stepTwc</a> (void *masEl, <a class="el" href="array_8h.html#a85bed353cccbcc37f36f8f196ed33ca1">largeSize_tp</a> num)</td></tr>
+<tr class="separator:a6ac581ded1c8017f8d7af4b73d5e9752"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6ee9cca5ea96c0a9293ed13c8bde4de"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#ab6ee9cca5ea96c0a9293ed13c8bde4de">setRnd</a> (void *masEl, <a class="el" href="array_8h.html#a85bed353cccbcc37f36f8f196ed33ca1">largeSize_tp</a> num)</td></tr>
+<tr class="separator:ab6ee9cca5ea96c0a9293ed13c8bde4de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4831e4671e5762ed5807b7acd5e7495"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#aa4831e4671e5762ed5807b7acd5e7495">setDblRnd</a> (void *masEl, <a class="el" href="array_8h.html#a85bed353cccbcc37f36f8f196ed33ca1">largeSize_tp</a> num)</td></tr>
+<tr class="separator:aa4831e4671e5762ed5807b7acd5e7495"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96ad93c819618431386cc7f073fd8bfd"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a96ad93c819618431386cc7f073fd8bfd">setArr</a> (void *mas, const <a class="el" href="array_8h.html#a6aa2d87d09049793a21a7eb3ce83ed6b">size_tp</a> szEl, const <a class="el" href="array_8h.html#a85bed353cccbcc37f36f8f196ed33ca1">largeSize_tp</a> size, void(*setEl)(void *masEl, <a class="el" href="array_8h.html#a85bed353cccbcc37f36f8f196ed33ca1">largeSize_tp</a> num))</td></tr>
+<tr class="separator:a96ad93c819618431386cc7f073fd8bfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea79df069c40cf61e56755b56afda530"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#aea79df069c40cf61e56755b56afda530">setArrNew</a> (void *mas, void *newmas, const <a class="el" href="array_8h.html#a6aa2d87d09049793a21a7eb3ce83ed6b">size_tp</a> szEl, const <a class="el" href="array_8h.html#a85bed353cccbcc37f36f8f196ed33ca1">largeSize_tp</a> size, void(*setEl)(void *masEl, <a class="el" href="array_8h.html#a85bed353cccbcc37f36f8f196ed33ca1">largeSize_tp</a> num))</td></tr>
+<tr class="separator:aea79df069c40cf61e56755b56afda530"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9288397de72d488e524d57e5bc493419"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a9288397de72d488e524d57e5bc493419">mapArr</a> (void *mas, const <a class="el" href="array_8h.html#a6aa2d87d09049793a21a7eb3ce83ed6b">size_tp</a> szEl, const <a class="el" href="array_8h.html#a85bed353cccbcc37f36f8f196ed33ca1">largeSize_tp</a> size, void(*procEl)(void *masEl))</td></tr>
+<tr class="separator:a9288397de72d488e524d57e5bc493419"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0eec773586d9c898ab063e40b1a10184"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a0eec773586d9c898ab063e40b1a10184">mapArrNew</a> (void *mas, void *newmas, const <a class="el" href="array_8h.html#a6aa2d87d09049793a21a7eb3ce83ed6b">size_tp</a> szEl, const <a class="el" href="array_8h.html#a85bed353cccbcc37f36f8f196ed33ca1">largeSize_tp</a> size, void(*procEl)(void *masEl))</td></tr>
+<tr class="separator:a0eec773586d9c898ab063e40b1a10184"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10540cabf96f121768746acd36f07b69"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a10540cabf96f121768746acd36f07b69">sumArrEl</a> (void *acc, const void *masEl)</td></tr>
+<tr class="separator:a10540cabf96f121768746acd36f07b69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31f845a7f56b836f3449b5e88efccae2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a31f845a7f56b836f3449b5e88efccae2">sumDblArrEl</a> (void *acc, const void *masEl)</td></tr>
+<tr class="separator:a31f845a7f56b836f3449b5e88efccae2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08e5465f1d406d0b65a78d466c4d473d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a08e5465f1d406d0b65a78d466c4d473d">mulArrEl</a> (void *acc, const void *masEl)</td></tr>
+<tr class="separator:a08e5465f1d406d0b65a78d466c4d473d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a596499c6fdd31b4f5e49023c6a341d68"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a596499c6fdd31b4f5e49023c6a341d68">mulDblArrEl</a> (void *acc, const void *masEl)</td></tr>
+<tr class="separator:a596499c6fdd31b4f5e49023c6a341d68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a923ecad3d365d547fac1d67b73087cb4"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a923ecad3d365d547fac1d67b73087cb4">reduceArr</a> (const void *mas, const <a class="el" href="array_8h.html#a6aa2d87d09049793a21a7eb3ce83ed6b">size_tp</a> szEl, const <a class="el" href="array_8h.html#a85bed353cccbcc37f36f8f196ed33ca1">largeSize_tp</a> size, void *acc, void(*procEl)(void *acc, const void *masEl))</td></tr>
+<tr class="separator:a923ecad3d365d547fac1d67b73087cb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a744a46f64be96c5e7444d82fc2dbc647"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a744a46f64be96c5e7444d82fc2dbc647">Appropriate</a> (const void *mas, const <a class="el" href="array_8h.html#a6aa2d87d09049793a21a7eb3ce83ed6b">size_tp</a> szEl, const <a class="el" href="array_8h.html#a85bed353cccbcc37f36f8f196ed33ca1">largeSize_tp</a> size, enum <a class="el" href="array_8h.html#adefa58bb66a98146754068591a1b67e1">typeAppr</a> type, int(*checkEl)(const void *masEl))</td></tr>
+<tr class="separator:a744a46f64be96c5e7444d82fc2dbc647"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a40d0af03a2b36772b435e48d839834"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a3a40d0af03a2b36772b435e48d839834">filterArr</a> (void *mas, void *newmas, const <a class="el" href="array_8h.html#a6aa2d87d09049793a21a7eb3ce83ed6b">size_tp</a> szEl, const <a class="el" href="array_8h.html#a85bed353cccbcc37f36f8f196ed33ca1">largeSize_tp</a> size, <a class="el" href="array_8h.html#a85bed353cccbcc37f36f8f196ed33ca1">largeSize_tp</a> *newsize, int(*checkEl)(const void *masEl))</td></tr>
+<tr class="separator:a3a40d0af03a2b36772b435e48d839834"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a654a23b5db77a15079ee9f8600210cc8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a654a23b5db77a15079ee9f8600210cc8">sumArraysEl</a> (const void *masEl1, const void *masEl2, void *resEl, <a class="el" href="array_8h.html#a85bed353cccbcc37f36f8f196ed33ca1">largeSize_tp</a> num)</td></tr>
+<tr class="separator:a654a23b5db77a15079ee9f8600210cc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a789c97469da4a9dafcde3a9b47b9f655"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a789c97469da4a9dafcde3a9b47b9f655">mulArraysEl</a> (const void *masEl1, const void *masEl2, void *resEl, <a class="el" href="array_8h.html#a85bed353cccbcc37f36f8f196ed33ca1">largeSize_tp</a> num)</td></tr>
+<tr class="separator:a789c97469da4a9dafcde3a9b47b9f655"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3d6fd617e98a39197b01bc2471bfe0e"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#ad3d6fd617e98a39197b01bc2471bfe0e">procArrays</a> (void *mas1, void *mas2, void *newmas, const <a class="el" href="array_8h.html#a6aa2d87d09049793a21a7eb3ce83ed6b">size_tp</a> szEl, const <a class="el" href="array_8h.html#a85bed353cccbcc37f36f8f196ed33ca1">largeSize_tp</a> size, void(*procEl)(const void *masEl1, const void *masEl2, void *resEl, <a class="el" href="array_8h.html#a85bed353cccbcc37f36f8f196ed33ca1">largeSize_tp</a> num))</td></tr>
+<tr class="separator:ad3d6fd617e98a39197b01bc2471bfe0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Функции</h2>
+<a id="a744a46f64be96c5e7444d82fc2dbc647"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a744a46f64be96c5e7444d82fc2dbc647">&#9670;&nbsp;</a></span>Appropriate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Appropriate </td>
+          <td>(</td>
+          <td class="paramtype">const void *&#160;</td>
+          <td class="paramname"><em>mas</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="array_8h.html#a6aa2d87d09049793a21a7eb3ce83ed6b">size_tp</a>&#160;</td>
+          <td class="paramname"><em>szEl</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="array_8h.html#a85bed353cccbcc37f36f8f196ed33ca1">largeSize_tp</a>&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">enum <a class="el" href="array_8h.html#adefa58bb66a98146754068591a1b67e1">typeAppr</a>&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int(*)(const void *masEl)&#160;</td>
+          <td class="paramname"><em>checkEl</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="main_8c_source.html">main.c</a> строка <a class="el" href="main_8c_source.html#l00160">160</a></p>
+
+</div>
+</div>
+<a id="a8e42660f16df4fb9c8a89a57602c4bfa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e42660f16df4fb9c8a89a57602c4bfa">&#9670;&nbsp;</a></span>aprint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void aprint </td>
+          <td>(</td>
+          <td class="paramtype">const void *&#160;</td>
+          <td class="paramname"><em>mas</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="array_8h.html#a6aa2d87d09049793a21a7eb3ce83ed6b">size_tp</a>&#160;</td>
+          <td class="paramname"><em>szEl</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="array_8h.html#a85bed353cccbcc37f36f8f196ed33ca1">largeSize_tp</a>&#160;</td>
+          <td class="paramname"><em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="array_8h.html#a85bed353cccbcc37f36f8f196ed33ca1">largeSize_tp</a>&#160;</td>
+          <td class="paramname"><em>m</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>title</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void(*)(const void *arg)&#160;</td>
+          <td class="paramname"><em>print</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>������� ������ ������� </p>
+
+<p class="definition">См. определение в файле <a class="el" href="main_8c_source.html">main.c</a> строка <a class="el" href="main_8c_source.html#l00040">40</a></p>
+
+</div>
+</div>
+<a id="a3a40d0af03a2b36772b435e48d839834"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a40d0af03a2b36772b435e48d839834">&#9670;&nbsp;</a></span>filterArr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void* filterArr </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>mas</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>newmas</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="array_8h.html#a6aa2d87d09049793a21a7eb3ce83ed6b">size_tp</a>&#160;</td>
+          <td class="paramname"><em>szEl</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="array_8h.html#a85bed353cccbcc37f36f8f196ed33ca1">largeSize_tp</a>&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="array_8h.html#a85bed353cccbcc37f36f8f196ed33ca1">largeSize_tp</a> *&#160;</td>
+          <td class="paramname"><em>newsize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int(*)(const void *masEl)&#160;</td>
+          <td class="paramname"><em>checkEl</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="main_8c_source.html">main.c</a> строка <a class="el" href="main_8c_source.html#l00187">187</a></p>
+
+</div>
+</div>
+<a id="a9288397de72d488e524d57e5bc493419"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9288397de72d488e524d57e5bc493419">&#9670;&nbsp;</a></span>mapArr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void* mapArr </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>mas</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="array_8h.html#a6aa2d87d09049793a21a7eb3ce83ed6b">size_tp</a>&#160;</td>
+          <td class="paramname"><em>szEl</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="array_8h.html#a85bed353cccbcc37f36f8f196ed33ca1">largeSize_tp</a>&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void(*)(void *masEl)&#160;</td>
+          <td class="paramname"><em>procEl</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="main_8c_source.html">main.c</a> строка <a class="el" href="main_8c_source.html#l00101">101</a></p>
+
+</div>
+</div>
+<a id="a0eec773586d9c898ab063e40b1a10184"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0eec773586d9c898ab063e40b1a10184">&#9670;&nbsp;</a></span>mapArrNew()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void* mapArrNew </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>mas</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>newmas</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="array_8h.html#a6aa2d87d09049793a21a7eb3ce83ed6b">size_tp</a>&#160;</td>
+          <td class="paramname"><em>szEl</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="array_8h.html#a85bed353cccbcc37f36f8f196ed33ca1">largeSize_tp</a>&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void(*)(void *masEl)&#160;</td>
+          <td class="paramname"><em>procEl</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="main_8c_source.html">main.c</a> строка <a class="el" href="main_8c_source.html#l00111">111</a></p>
+
+</div>
+</div>
+<a id="a789c97469da4a9dafcde3a9b47b9f655"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a789c97469da4a9dafcde3a9b47b9f655">&#9670;&nbsp;</a></span>mulArraysEl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mulArraysEl </td>
+          <td>(</td>
+          <td class="paramtype">const void *&#160;</td>
+          <td class="paramname"><em>masEl1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const void *&#160;</td>
+          <td class="paramname"><em>masEl2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>resEl</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="array_8h.html#a85bed353cccbcc37f36f8f196ed33ca1">largeSize_tp</a>&#160;</td>
+          <td class="paramname"><em>num</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="main_8c_source.html">main.c</a> строка <a class="el" href="main_8c_source.html#l00213">213</a></p>
+
+</div>
+</div>
+<a id="a08e5465f1d406d0b65a78d466c4d473d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a08e5465f1d406d0b65a78d466c4d473d">&#9670;&nbsp;</a></span>mulArrEl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mulArrEl </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>acc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const void *&#160;</td>
+          <td class="paramname"><em>masEl</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="main_8c_source.html">main.c</a> строка <a class="el" href="main_8c_source.html#l00136">136</a></p>
+
+</div>
+</div>
+<a id="a596499c6fdd31b4f5e49023c6a341d68"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a596499c6fdd31b4f5e49023c6a341d68">&#9670;&nbsp;</a></span>mulDblArrEl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mulDblArrEl </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>acc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const void *&#160;</td>
+          <td class="paramname"><em>masEl</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="main_8c_source.html">main.c</a> строка <a class="el" href="main_8c_source.html#l00140">140</a></p>
+
+</div>
+</div>
+<a id="a0362bbd5c092e74a881637cebad0c16e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0362bbd5c092e74a881637cebad0c16e">&#9670;&nbsp;</a></span>printCmplx()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void printCmplx </td>
+          <td>(</td>
+          <td class="paramtype">const void *&#160;</td>
+          <td class="paramname"><em>arg</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="main_8c_source.html">main.c</a> строка <a class="el" href="main_8c_source.html#l00035">35</a></p>
+
+</div>
+</div>
+<a id="a4785727077d4aabae6fe6e88ffd59f88"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4785727077d4aabae6fe6e88ffd59f88">&#9670;&nbsp;</a></span>printDbl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void printDbl </td>
+          <td>(</td>
+          <td class="paramtype">const void *&#160;</td>
+          <td class="paramname"><em>arg</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="main_8c_source.html">main.c</a> строка <a class="el" href="main_8c_source.html#l00027">27</a></p>
+
+</div>
+</div>
+<a id="a1bea3bf2b8916c4bafef5fa858bb2b47"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1bea3bf2b8916c4bafef5fa858bb2b47">&#9670;&nbsp;</a></span>printExp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void printExp </td>
+          <td>(</td>
+          <td class="paramtype">const void *&#160;</td>
+          <td class="paramname"><em>arg</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="main_8c_source.html">main.c</a> строка <a class="el" href="main_8c_source.html#l00031">31</a></p>
+
+</div>
+</div>
+<a id="a753bc769acc47dd8b4ef421adf531c45"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a753bc769acc47dd8b4ef421adf531c45">&#9670;&nbsp;</a></span>printFlt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void printFlt </td>
+          <td>(</td>
+          <td class="paramtype">const void *&#160;</td>
+          <td class="paramname"><em>arg</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="main_8c_source.html">main.c</a> строка <a class="el" href="main_8c_source.html#l00023">23</a></p>
+
+</div>
+</div>
+<a id="ad37a4228146958633b9805f790cf3beb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad37a4228146958633b9805f790cf3beb">&#9670;&nbsp;</a></span>printInt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void printInt </td>
+          <td>(</td>
+          <td class="paramtype">const void *&#160;</td>
+          <td class="paramname"><em>arg</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>����������������� ��������������� ������� ��� ������ ������� </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">arg</td><td>��������� �� �������� ������� ����� �������</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>������� ������ ��� ������ �������� ������� �����. ����� ������� ����������� ������������ ������� ��� ������ �������� ������ ���� </p>
+
+<p class="definition">См. определение в файле <a class="el" href="main_8c_source.html">main.c</a> строка <a class="el" href="main_8c_source.html#l00019">19</a></p>
+
+</div>
+</div>
+<a id="ad3d6fd617e98a39197b01bc2471bfe0e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3d6fd617e98a39197b01bc2471bfe0e">&#9670;&nbsp;</a></span>procArrays()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void* procArrays </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>mas1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>mas2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>newmas</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="array_8h.html#a6aa2d87d09049793a21a7eb3ce83ed6b">size_tp</a>&#160;</td>
+          <td class="paramname"><em>szEl</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="array_8h.html#a85bed353cccbcc37f36f8f196ed33ca1">largeSize_tp</a>&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void(*)(const void *masEl1, const void *masEl2, void *resEl, <a class="el" href="array_8h.html#a85bed353cccbcc37f36f8f196ed33ca1">largeSize_tp</a> num)&#160;</td>
+          <td class="paramname"><em>procEl</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="main_8c_source.html">main.c</a> строка <a class="el" href="main_8c_source.html#l00218">218</a></p>
+
+</div>
+</div>
+<a id="a923ecad3d365d547fac1d67b73087cb4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a923ecad3d365d547fac1d67b73087cb4">&#9670;&nbsp;</a></span>reduceArr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void* reduceArr </td>
+          <td>(</td>
+          <td class="paramtype">const void *&#160;</td>
+          <td class="paramname"><em>mas</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="array_8h.html#a6aa2d87d09049793a21a7eb3ce83ed6b">size_tp</a>&#160;</td>
+          <td class="paramname"><em>szEl</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="array_8h.html#a85bed353cccbcc37f36f8f196ed33ca1">largeSize_tp</a>&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>acc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void(*)(void *acc, const void *masEl)&#160;</td>
+          <td class="paramname"><em>procEl</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="main_8c_source.html">main.c</a> строка <a class="el" href="main_8c_source.html#l00145">145</a></p>
+
+</div>
+</div>
+<a id="a96ad93c819618431386cc7f073fd8bfd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96ad93c819618431386cc7f073fd8bfd">&#9670;&nbsp;</a></span>setArr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void* setArr </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>mas</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="array_8h.html#a6aa2d87d09049793a21a7eb3ce83ed6b">size_tp</a>&#160;</td>
+          <td class="paramname"><em>szEl</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="array_8h.html#a85bed353cccbcc37f36f8f196ed33ca1">largeSize_tp</a>&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void(*)(void *masEl, <a class="el" href="array_8h.html#a85bed353cccbcc37f36f8f196ed33ca1">largeSize_tp</a> num)&#160;</td>
+          <td class="paramname"><em>setEl</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="main_8c_source.html">main.c</a> строка <a class="el" href="main_8c_source.html#l00073">73</a></p>
+
+</div>
+</div>
+<a id="aea79df069c40cf61e56755b56afda530"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea79df069c40cf61e56755b56afda530">&#9670;&nbsp;</a></span>setArrNew()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void* setArrNew </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>mas</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>newmas</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="array_8h.html#a6aa2d87d09049793a21a7eb3ce83ed6b">size_tp</a>&#160;</td>
+          <td class="paramname"><em>szEl</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="array_8h.html#a85bed353cccbcc37f36f8f196ed33ca1">largeSize_tp</a>&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void(*)(void *masEl, <a class="el" href="array_8h.html#a85bed353cccbcc37f36f8f196ed33ca1">largeSize_tp</a> num)&#160;</td>
+          <td class="paramname"><em>setEl</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="main_8c_source.html">main.c</a> строка <a class="el" href="main_8c_source.html#l00083">83</a></p>
+
+</div>
+</div>
+<a id="aa4831e4671e5762ed5807b7acd5e7495"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4831e4671e5762ed5807b7acd5e7495">&#9670;&nbsp;</a></span>setDblRnd()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setDblRnd </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>masEl</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="array_8h.html#a85bed353cccbcc37f36f8f196ed33ca1">largeSize_tp</a>&#160;</td>
+          <td class="paramname"><em>num</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="main_8c_source.html">main.c</a> строка <a class="el" href="main_8c_source.html#l00068">68</a></p>
+
+</div>
+</div>
+<a id="ab6ee9cca5ea96c0a9293ed13c8bde4de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6ee9cca5ea96c0a9293ed13c8bde4de">&#9670;&nbsp;</a></span>setRnd()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setRnd </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>masEl</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="array_8h.html#a85bed353cccbcc37f36f8f196ed33ca1">largeSize_tp</a>&#160;</td>
+          <td class="paramname"><em>num</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="main_8c_source.html">main.c</a> строка <a class="el" href="main_8c_source.html#l00064">64</a></p>
+
+</div>
+</div>
+<a id="aad65d387ed9f1429aa435146294ebd11"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad65d387ed9f1429aa435146294ebd11">&#9670;&nbsp;</a></span>step()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void step </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>masEl</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="array_8h.html#a85bed353cccbcc37f36f8f196ed33ca1">largeSize_tp</a>&#160;</td>
+          <td class="paramname"><em>num</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="main_8c_source.html">main.c</a> строка <a class="el" href="main_8c_source.html#l00056">56</a></p>
+
+</div>
+</div>
+<a id="a6ac581ded1c8017f8d7af4b73d5e9752"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ac581ded1c8017f8d7af4b73d5e9752">&#9670;&nbsp;</a></span>stepTwc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void stepTwc </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>masEl</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="array_8h.html#a85bed353cccbcc37f36f8f196ed33ca1">largeSize_tp</a>&#160;</td>
+          <td class="paramname"><em>num</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="main_8c_source.html">main.c</a> строка <a class="el" href="main_8c_source.html#l00060">60</a></p>
+
+</div>
+</div>
+<a id="a654a23b5db77a15079ee9f8600210cc8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a654a23b5db77a15079ee9f8600210cc8">&#9670;&nbsp;</a></span>sumArraysEl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sumArraysEl </td>
+          <td>(</td>
+          <td class="paramtype">const void *&#160;</td>
+          <td class="paramname"><em>masEl1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const void *&#160;</td>
+          <td class="paramname"><em>masEl2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>resEl</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="array_8h.html#a85bed353cccbcc37f36f8f196ed33ca1">largeSize_tp</a>&#160;</td>
+          <td class="paramname"><em>num</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="main_8c_source.html">main.c</a> строка <a class="el" href="main_8c_source.html#l00209">209</a></p>
+
+</div>
+</div>
+<a id="a10540cabf96f121768746acd36f07b69"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a10540cabf96f121768746acd36f07b69">&#9670;&nbsp;</a></span>sumArrEl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sumArrEl </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>acc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const void *&#160;</td>
+          <td class="paramname"><em>masEl</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="main_8c_source.html">main.c</a> строка <a class="el" href="main_8c_source.html#l00128">128</a></p>
+
+</div>
+</div>
+<a id="a31f845a7f56b836f3449b5e88efccae2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31f845a7f56b836f3449b5e88efccae2">&#9670;&nbsp;</a></span>sumDblArrEl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sumDblArrEl </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>acc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const void *&#160;</td>
+          <td class="paramname"><em>masEl</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="main_8c_source.html">main.c</a> строка <a class="el" href="main_8c_source.html#l00132">132</a></p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>
