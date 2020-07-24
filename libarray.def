@@ -1,0 +1,26 @@
+EXPORTS
+    Appropriate @1
+    DllMain@12 @2
+    aprint @3
+    filterArr @4
+    mapArr @5
+    mapArrNew @6
+    mulArrEl @7
+    mulArraysEl @8
+    mulDblArrEl @9
+    printCmplx @10
+    printDbl @11
+    printExp @12
+    printFlt @13
+    printInt @14
+    procArrays @15
+    reduceArr @16
+    setArr @17
+    setArrNew @18
+    setDblRnd @19
+    setRnd @20
+    step @21
+    stepTwc @22
+    sumArrEl @23
+    sumArraysEl @24
+    sumDblArrEl @25
