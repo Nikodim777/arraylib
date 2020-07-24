@@ -1,14 +1,3 @@
-/*Библиотека для упрощения работы с массивами на языке си
-//slice(mas,beg,end,step)
-//filter(mas,func)
-//merge(mas1,mas2,filter)
-//fill(mas,func)
-//all(mas,func)
-//any(mas,func)
-//count(mas,func)
-//map(mas,func)
-//reduce(mas,func)
-//mprintf(mas,func)*/
 #include <stdio.h>
 #include <stdlib.h>
 #include <memory.h>
