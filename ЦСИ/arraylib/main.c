@@ -1,3 +1,14 @@
+/*Библиотека для упрощения работы с массивами на языке си
+//slice(mas,beg,end,step)
+//filter(mas,func)
+//merge(mas1,mas2,filter)
+//fill(mas,func)
+//all(mas,func)
+//any(mas,func)
+//count(mas,func)
+//map(mas,func)
+//reduce(mas,func)
+//mprintf(mas,func)*/
 #include <stdio.h>
 #include <stdlib.h>
 #include <memory.h>
@@ -26,7 +37,7 @@ void printCmplx(const void *arg)
     printf("%.3f+%.3f*i\t", creal(*(double complex*)arg), cimag(*(double complex*)arg));
 }
 
-void aprint(const void *mas, const size_t szEl, const largeSize_tp size1, const largeSize_tp size2, const char *title, void (*print)(const void *arg))
+void aprint(void *mas, const size_t szEl, const largeSize_tp size1, const largeSize_tp size2, const char *title, void (*print)(const void *arg))
 {
     long long i, j;
     printf("%s\n", title);
@@ -36,6 +47,16 @@ void aprint(const void *mas, const size_t szEl, const largeSize_tp size1, const 
         }
         printf("\n");
     }
+}
+
+void dprint(void *data, const char *title, void (*print)(const void *arg), void* (*iterate)(void *curEl))
+{
+    printf("%s\n", title);
+    while(data) {
+        print(data);
+        data = iterate(data);
+    }
+    printf("\n");
 }
 
 
@@ -82,6 +103,16 @@ void *setArrNew(void *mas, void *newmas, const size_t szEl, const largeSize_tp s
     return tmpptr;
 }
 
+void *setData(void *data, void (*setEl)(void* masEl, largeSize_tp num), void* (*iterate)(void *curEl))
+{
+    long long i;
+    void *tmpptr = data;
+    for(i = 0; (data = iterate(data)); i++) {
+        setEl(data, i);
+    }
+    return tmpptr;
+}
+
 
 
 
@@ -110,6 +141,16 @@ void *mapArrNew(void *mas, void *newmas, const size_t szEl, const largeSize_tp s
     return tmpptr;
 }
 
+void *mapData(void *data, void (*procEl)(void *masEl), void* (*iterate)(void *curEl))
+{
+    void *tmpptr = data;
+    while(data) {
+        procEl(data);
+        data = iterate(data);
+    }
+    return tmpptr;
+}
+
 
 
 
@@ -131,11 +172,20 @@ void mulDblArrEl(void *acc, const void *masEl)
     *(double*)acc *= *(double*)masEl;
 }
 
-void *reduceArr(const void *mas, const size_t szEl, const largeSize_tp size, void *acc, void (*procEl)(void *acc, const void *masEl))
+void *reduceArr(void *mas, const size_t szEl, const largeSize_tp size, void *acc, void (*procEl)(void *acc, const void *masEl))
 {
     long long i;
     for(i = 0; i < size; i++, mas += szEl) {
         procEl(acc, mas);
+    }
+    return acc;
+}
+
+void *reduceData(void *data, void *acc, void (*procEl)(void *acc, const void *masEl), void* (*iterate)(void *curEl))
+{
+    while(data) {
+        procEl(acc, data);
+        data = iterate(data);
     }
     return acc;
 }
@@ -146,7 +196,7 @@ void *reduceArr(const void *mas, const size_t szEl, const largeSize_tp size, voi
 
 
 
-int Appropriate(const void *mas, const size_t szEl, const largeSize_tp size, enum typeAppr type, enum checkRes (*checkEl)(const void *masEl))
+int Appropriate(void *mas, const size_t szEl, const largeSize_tp size, enum typeAppr type, enum checkRes (*checkEl)(const void *masEl))
 {
     long long i;
     long long tmp;
@@ -165,6 +215,30 @@ int Appropriate(const void *mas, const size_t szEl, const largeSize_tp size, enu
         } else if(type == CNT_APPR) {
             tmp += checkEl(mas);
         }
+
+    return tmp;
+}
+
+int AppropriateData(void *data, enum typeAppr type, enum checkRes (*checkEl)(const void *masEl), void* (*iterate)(void *curEl))
+{
+    long long tmp;
+
+    if(type == ALL_APPR) {
+        tmp = 1;
+    } else {
+        tmp = 0;
+    }
+
+    while(data){
+        if(type == ALL_APPR) {
+            tmp &= checkEl(data);
+        } else if(type == ANY_APPR) {
+            tmp |= checkEl(data);
+        } else if(type == CNT_APPR) {
+            tmp += checkEl(data);
+        }
+        data = iterate(data);
+    }
 
     return tmp;
 }
