@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.18"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Библиотека для работы с массивами: Файл array.h</title>
+<title>Библиотека для работы с массивами и другими структурами данных: Файл array.h</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -18,10 +18,8 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Библиотека для работы с массивами
-   &#160;<span id="projectnumber">1.0</span>
+   <div id="projectname">Библиотека для работы с массивами и другими структурами данных
    </div>
-   <div id="projectbrief">Набор функций и макросов для работы с массивами</div>
   </td>
  </tr>
  </tbody>
@@ -29,19 +27,15 @@
 </div>
 <!-- end header part -->
 <!-- Создано системой Doxygen 1.8.18 -->
-  <div id="navrow1" class="tabs">
-    <ul class="tablist">
-      <li><a href="index.html"><span>Титульная&#160;страница</span></a></li>
-      <li class="current"><a href="files.html"><span>Файлы</span></a></li>
-      <li><a href="examples.html"><span>Примеры</span></a></li>
-    </ul>
-  </div>
-  <div id="navrow2" class="tabs2">
-    <ul class="tablist">
-      <li><a href="files.html"><span>Файлы</span></a></li>
-      <li><a href="globals.html"><span>Список&#160;членов&#160;всех&#160;файлов</span></a></li>
-    </ul>
-  </div>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',false,false,'search.php','Поиск');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
@@ -63,40 +57,40 @@
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Макросы</h2></td></tr>
 <tr class="memitem:a24164a8cead78793ce550024b315b999"><td class="memItemLeft" align="right" valign="top"><a id="a24164a8cead78793ce550024b315b999"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>aprinti</b>(mas,  size1,  size2,  title)&#160;&#160;&#160;<a class="el" href="array_8h.html#a44806cc869ff4495418791a903b6d0d2">aprint</a>((mas),sizeof(int),(size1),(size2),(title),printInt);</td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>aprinti</b>(mas,  size1,  size2,  title)&#160;&#160;&#160;<a class="el" href="array_8h.html#a1b631913eac2d2abb139ef12809ebfe3">aprint</a>((mas),sizeof(int),(size1),(size2),(title),printInt);</td></tr>
 <tr class="separator:a24164a8cead78793ce550024b315b999"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7aaf3f1549c8b1b93af2d8da15d308c5"><td class="memItemLeft" align="right" valign="top"><a id="a7aaf3f1549c8b1b93af2d8da15d308c5"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>aprintf</b>(mas,  size1,  size2,  title)&#160;&#160;&#160;<a class="el" href="array_8h.html#a44806cc869ff4495418791a903b6d0d2">aprint</a>((mas),sizeof(float),(size1),(size2),(title),printFlt);</td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>aprintf</b>(mas,  size1,  size2,  title)&#160;&#160;&#160;<a class="el" href="array_8h.html#a1b631913eac2d2abb139ef12809ebfe3">aprint</a>((mas),sizeof(float),(size1),(size2),(title),printFlt);</td></tr>
 <tr class="separator:a7aaf3f1549c8b1b93af2d8da15d308c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a20349ba3dd717b86fe9878206857ceaa"><td class="memItemLeft" align="right" valign="top"><a id="a20349ba3dd717b86fe9878206857ceaa"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>aprintd</b>(mas,  size1,  size2,  title)&#160;&#160;&#160;<a class="el" href="array_8h.html#a44806cc869ff4495418791a903b6d0d2">aprint</a>((mas),sizeof(double),(size1),(size2),(title),printDbl);</td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>aprintd</b>(mas,  size1,  size2,  title)&#160;&#160;&#160;<a class="el" href="array_8h.html#a1b631913eac2d2abb139ef12809ebfe3">aprint</a>((mas),sizeof(double),(size1),(size2),(title),printDbl);</td></tr>
 <tr class="separator:a20349ba3dd717b86fe9878206857ceaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7b8cf8652979e04bb738fb7a26fe1d4f"><td class="memItemLeft" align="right" valign="top"><a id="a7b8cf8652979e04bb738fb7a26fe1d4f"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>aprinte</b>(mas,  size1,  size2,  title)&#160;&#160;&#160;<a class="el" href="array_8h.html#a44806cc869ff4495418791a903b6d0d2">aprint</a>((mas),sizeof(double),(size1),(size2),(title),printExp);</td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>aprinte</b>(mas,  size1,  size2,  title)&#160;&#160;&#160;<a class="el" href="array_8h.html#a1b631913eac2d2abb139ef12809ebfe3">aprint</a>((mas),sizeof(double),(size1),(size2),(title),printExp);</td></tr>
 <tr class="separator:a7b8cf8652979e04bb738fb7a26fe1d4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5c0f06a90964ae39e254d678964cebc5"><td class="memItemLeft" align="right" valign="top"><a id="a5c0f06a90964ae39e254d678964cebc5"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>aprintc</b>(mas,  size1,  size2,  title)&#160;&#160;&#160;<a class="el" href="array_8h.html#a44806cc869ff4495418791a903b6d0d2">aprint</a>((mas),sizeof(double complex),(size1),(size2),(title),printCmplx);</td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>aprintc</b>(mas,  size1,  size2,  title)&#160;&#160;&#160;<a class="el" href="array_8h.html#a1b631913eac2d2abb139ef12809ebfe3">aprint</a>((mas),sizeof(double complex),(size1),(size2),(title),printCmplx);</td></tr>
 <tr class="separator:a5c0f06a90964ae39e254d678964cebc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6623358ee84b6a7b6632208fb83c4207"><td class="memItemLeft" align="right" valign="top"><a id="a6623358ee84b6a7b6632208fb83c4207"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>aprintl</b>(mas,  size,  title,  print)&#160;&#160;&#160;<a class="el" href="array_8h.html#a44806cc869ff4495418791a903b6d0d2">aprint</a>((mas),sizeof(mas[0]),1,(size),(title),(print));</td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>aprintl</b>(mas,  size,  title,  print)&#160;&#160;&#160;<a class="el" href="array_8h.html#a1b631913eac2d2abb139ef12809ebfe3">aprint</a>((mas),sizeof(mas[0]),1,(size),(title),(print));</td></tr>
 <tr class="separator:a6623358ee84b6a7b6632208fb83c4207"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7a454e80434b3bfba196d103dc1309aa"><td class="memItemLeft" align="right" valign="top"><a id="a7a454e80434b3bfba196d103dc1309aa"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>aprintt</b>(mas,  size1,  size2,  title,  print)&#160;&#160;&#160;<a class="el" href="array_8h.html#a44806cc869ff4495418791a903b6d0d2">aprint</a>((mas),sizeof(mas[0][0]),(size1),(size2),(title),(print));</td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>aprintt</b>(mas,  size1,  size2,  title,  print)&#160;&#160;&#160;<a class="el" href="array_8h.html#a1b631913eac2d2abb139ef12809ebfe3">aprint</a>((mas),sizeof(mas[0][0]),(size1),(size2),(title),(print));</td></tr>
 <tr class="separator:a7a454e80434b3bfba196d103dc1309aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad47151cf53d6d34a0bbb206837c1ef12"><td class="memItemLeft" align="right" valign="top"><a id="ad47151cf53d6d34a0bbb206837c1ef12"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>aprintli</b>(mas,  size,  title)&#160;&#160;&#160;<a class="el" href="array_8h.html#a44806cc869ff4495418791a903b6d0d2">aprint</a>((mas),sizeof(int),1,(size),(title),printInt);</td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>aprintli</b>(mas,  size,  title)&#160;&#160;&#160;<a class="el" href="array_8h.html#a1b631913eac2d2abb139ef12809ebfe3">aprint</a>((mas),sizeof(int),1,(size),(title),printInt);</td></tr>
 <tr class="separator:ad47151cf53d6d34a0bbb206837c1ef12"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a73296d19eecfa4a4cdb0a01c32629eec"><td class="memItemLeft" align="right" valign="top"><a id="a73296d19eecfa4a4cdb0a01c32629eec"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>aprintlf</b>(mas,  size,  title)&#160;&#160;&#160;<a class="el" href="array_8h.html#a44806cc869ff4495418791a903b6d0d2">aprint</a>((mas),sizeof(float),1,(size),(title),printFlt);</td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>aprintlf</b>(mas,  size,  title)&#160;&#160;&#160;<a class="el" href="array_8h.html#a1b631913eac2d2abb139ef12809ebfe3">aprint</a>((mas),sizeof(float),1,(size),(title),printFlt);</td></tr>
 <tr class="separator:a73296d19eecfa4a4cdb0a01c32629eec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad03bacc725ed5b5ed3598635ce05258d"><td class="memItemLeft" align="right" valign="top"><a id="ad03bacc725ed5b5ed3598635ce05258d"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>aprintld</b>(mas,  size,  title)&#160;&#160;&#160;<a class="el" href="array_8h.html#a44806cc869ff4495418791a903b6d0d2">aprint</a>((mas),sizeof(double),1,(size),(title),printDbl);</td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>aprintld</b>(mas,  size,  title)&#160;&#160;&#160;<a class="el" href="array_8h.html#a1b631913eac2d2abb139ef12809ebfe3">aprint</a>((mas),sizeof(double),1,(size),(title),printDbl);</td></tr>
 <tr class="separator:ad03bacc725ed5b5ed3598635ce05258d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afb6ee11106b905dce75bdc30f943fdaa"><td class="memItemLeft" align="right" valign="top"><a id="afb6ee11106b905dce75bdc30f943fdaa"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>aprintle</b>(mas,  size,  title)&#160;&#160;&#160;<a class="el" href="array_8h.html#a44806cc869ff4495418791a903b6d0d2">aprint</a>((mas),sizeof(double),1,(size),(title),printExp);</td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>aprintle</b>(mas,  size,  title)&#160;&#160;&#160;<a class="el" href="array_8h.html#a1b631913eac2d2abb139ef12809ebfe3">aprint</a>((mas),sizeof(double),1,(size),(title),printExp);</td></tr>
 <tr class="separator:afb6ee11106b905dce75bdc30f943fdaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a86df9ec60464479d5c9f30f6a20b864a"><td class="memItemLeft" align="right" valign="top"><a id="a86df9ec60464479d5c9f30f6a20b864a"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>aprintlc</b>(mas,  size,  title)&#160;&#160;&#160;<a class="el" href="array_8h.html#a44806cc869ff4495418791a903b6d0d2">aprint</a>((mas),sizeof(double complex),1,(size),(title),printCmplx);</td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>aprintlc</b>(mas,  size,  title)&#160;&#160;&#160;<a class="el" href="array_8h.html#a1b631913eac2d2abb139ef12809ebfe3">aprint</a>((mas),sizeof(double complex),1,(size),(title),printCmplx);</td></tr>
 <tr class="separator:a86df9ec60464479d5c9f30f6a20b864a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0fede73f08cc9035a05764e802cdf871"><td class="memItemLeft" align="right" valign="top"><a id="a0fede73f08cc9035a05764e802cdf871"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>setArrl</b>(mas,  size,  func)&#160;&#160;&#160;<a class="el" href="array_8h.html#a5230e62f649eeb0d92279cc2d181d7c5">setArr</a>((mas),sizeof(mas[0]),(size),(func));</td></tr>
@@ -126,29 +120,38 @@
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>mapArrtn</b>(mas,  newmas,  size,  func)&#160;&#160;&#160;mapArrNew((mas),(newmas),sizeof(mas[0][0]),(size),(func));</td></tr>
 <tr class="separator:aa4e7f4b8ca0a5ffa45138724c77fbfdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a221cb8ae2286619db8d5777e7ebea173"><td class="memItemLeft" align="right" valign="top"><a id="a221cb8ae2286619db8d5777e7ebea173"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>reduceArrl</b>(mas,  size,  acc,  func)&#160;&#160;&#160;<a class="el" href="array_8h.html#a6d65735eceb941e486a4bff9cd242b23">reduceArr</a>((mas),sizeof(mas[0]),(size),(acc),(func));</td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>reduceArrl</b>(mas,  size,  acc,  func)&#160;&#160;&#160;<a class="el" href="array_8h.html#ab7316a57757a23631e9501c1a0676119">reduceArr</a>((mas),sizeof(mas[0]),(size),(acc),(func));</td></tr>
 <tr class="separator:a221cb8ae2286619db8d5777e7ebea173"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a59c6ba9546260340e775f1e0af8ba6ac"><td class="memItemLeft" align="right" valign="top"><a id="a59c6ba9546260340e775f1e0af8ba6ac"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>reduceArrt</b>(mas,  size,  acc,  func)&#160;&#160;&#160;<a class="el" href="array_8h.html#a6d65735eceb941e486a4bff9cd242b23">reduceArr</a>((mas),sizeof(mas[0][0]),(size),(acc),(func));</td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>reduceArrt</b>(mas,  size,  acc,  func)&#160;&#160;&#160;<a class="el" href="array_8h.html#ab7316a57757a23631e9501c1a0676119">reduceArr</a>((mas),sizeof(mas[0][0]),(size),(acc),(func));</td></tr>
 <tr class="separator:a59c6ba9546260340e775f1e0af8ba6ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2d1525e2ea5978a76a45e3e35a31e038"><td class="memItemLeft" align="right" valign="top"><a id="a2d1525e2ea5978a76a45e3e35a31e038"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>allApprl</b>(mas,  size,  func)&#160;&#160;&#160;<a class="el" href="array_8h.html#a2e6bbc102686c9bdecae16b332797fc8">Appropriate</a>((mas),sizeof(mas[0]),(size),<a class="el" href="array_8h.html#adefa58bb66a98146754068591a1b67e1a09a63ebf93da587b7c2ccdf9b2cd98d8">ALL_APPR</a>,(func));</td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>allApprl</b>(mas,  size,  func)&#160;&#160;&#160;<a class="el" href="array_8h.html#a4cfae435f6f5e547738d0bb0c762962f">Appropriate</a>((mas),sizeof(mas[0]),(size),<a class="el" href="array_8h.html#adefa58bb66a98146754068591a1b67e1a09a63ebf93da587b7c2ccdf9b2cd98d8">ALL_APPR</a>,(func));</td></tr>
 <tr class="separator:a2d1525e2ea5978a76a45e3e35a31e038"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a42488a969d6b167cbb6fefb1d55db036"><td class="memItemLeft" align="right" valign="top"><a id="a42488a969d6b167cbb6fefb1d55db036"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>allApprt</b>(mas,  size,  func)&#160;&#160;&#160;<a class="el" href="array_8h.html#a2e6bbc102686c9bdecae16b332797fc8">Appropriate</a>((mas),sizeof(mas[0][0]),(size),<a class="el" href="array_8h.html#adefa58bb66a98146754068591a1b67e1a09a63ebf93da587b7c2ccdf9b2cd98d8">ALL_APPR</a>,(func));</td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>allApprt</b>(mas,  size,  func)&#160;&#160;&#160;<a class="el" href="array_8h.html#a4cfae435f6f5e547738d0bb0c762962f">Appropriate</a>((mas),sizeof(mas[0][0]),(size),<a class="el" href="array_8h.html#adefa58bb66a98146754068591a1b67e1a09a63ebf93da587b7c2ccdf9b2cd98d8">ALL_APPR</a>,(func));</td></tr>
 <tr class="separator:a42488a969d6b167cbb6fefb1d55db036"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a597a0b9e1e9acc39fe863a90e3a2acc8"><td class="memItemLeft" align="right" valign="top"><a id="a597a0b9e1e9acc39fe863a90e3a2acc8"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>anyApprl</b>(mas,  size,  func)&#160;&#160;&#160;<a class="el" href="array_8h.html#a2e6bbc102686c9bdecae16b332797fc8">Appropriate</a>((mas),sizeof(mas[0]),(size),<a class="el" href="array_8h.html#adefa58bb66a98146754068591a1b67e1a2d1eba698b2c22a31e9f017645d3f919">ANY_APPR</a>,(func));</td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>anyApprl</b>(mas,  size,  func)&#160;&#160;&#160;<a class="el" href="array_8h.html#a4cfae435f6f5e547738d0bb0c762962f">Appropriate</a>((mas),sizeof(mas[0]),(size),<a class="el" href="array_8h.html#adefa58bb66a98146754068591a1b67e1a2d1eba698b2c22a31e9f017645d3f919">ANY_APPR</a>,(func));</td></tr>
 <tr class="separator:a597a0b9e1e9acc39fe863a90e3a2acc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad8ea34e363b589b71c84a1815935c879"><td class="memItemLeft" align="right" valign="top"><a id="ad8ea34e363b589b71c84a1815935c879"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>anyApprt</b>(mas,  size,  func)&#160;&#160;&#160;<a class="el" href="array_8h.html#a2e6bbc102686c9bdecae16b332797fc8">Appropriate</a>((mas),sizeof(mas[0][0]),(size),<a class="el" href="array_8h.html#adefa58bb66a98146754068591a1b67e1a2d1eba698b2c22a31e9f017645d3f919">ANY_APPR</a>,(func));</td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>anyApprt</b>(mas,  size,  func)&#160;&#160;&#160;<a class="el" href="array_8h.html#a4cfae435f6f5e547738d0bb0c762962f">Appropriate</a>((mas),sizeof(mas[0][0]),(size),<a class="el" href="array_8h.html#adefa58bb66a98146754068591a1b67e1a2d1eba698b2c22a31e9f017645d3f919">ANY_APPR</a>,(func));</td></tr>
 <tr class="separator:ad8ea34e363b589b71c84a1815935c879"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9c2c9fdc00c9a0475d5e7c9ec8edf338"><td class="memItemLeft" align="right" valign="top"><a id="a9c2c9fdc00c9a0475d5e7c9ec8edf338"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>cntApprl</b>(mas,  size,  func)&#160;&#160;&#160;<a class="el" href="array_8h.html#a2e6bbc102686c9bdecae16b332797fc8">Appropriate</a>((mas),sizeof(mas[0]),(size),<a class="el" href="array_8h.html#adefa58bb66a98146754068591a1b67e1acc6015f917f37533479cab1a1b05d069">CNT_APPR</a>,(func));</td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>cntApprl</b>(mas,  size,  func)&#160;&#160;&#160;<a class="el" href="array_8h.html#a4cfae435f6f5e547738d0bb0c762962f">Appropriate</a>((mas),sizeof(mas[0]),(size),<a class="el" href="array_8h.html#adefa58bb66a98146754068591a1b67e1acc6015f917f37533479cab1a1b05d069">CNT_APPR</a>,(func));</td></tr>
 <tr class="separator:a9c2c9fdc00c9a0475d5e7c9ec8edf338"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a509410084a212946d55ad9373c68bdc0"><td class="memItemLeft" align="right" valign="top"><a id="a509410084a212946d55ad9373c68bdc0"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>cntApprt</b>(mas,  size,  func)&#160;&#160;&#160;<a class="el" href="array_8h.html#a2e6bbc102686c9bdecae16b332797fc8">Appropriate</a>((mas),sizeof(mas[0][0]),(size),<a class="el" href="array_8h.html#adefa58bb66a98146754068591a1b67e1acc6015f917f37533479cab1a1b05d069">CNT_APPR</a>,(func));</td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>cntApprt</b>(mas,  size,  func)&#160;&#160;&#160;<a class="el" href="array_8h.html#a4cfae435f6f5e547738d0bb0c762962f">Appropriate</a>((mas),sizeof(mas[0][0]),(size),<a class="el" href="array_8h.html#adefa58bb66a98146754068591a1b67e1acc6015f917f37533479cab1a1b05d069">CNT_APPR</a>,(func));</td></tr>
 <tr class="separator:a509410084a212946d55ad9373c68bdc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8fdd3120b6502541e5c621e46e9a5f6"><td class="memItemLeft" align="right" valign="top"><a id="af8fdd3120b6502541e5c621e46e9a5f6"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>allApprd</b>(mas,  func,  iter)&#160;&#160;&#160;AppropriateData((mas),<a class="el" href="array_8h.html#adefa58bb66a98146754068591a1b67e1a09a63ebf93da587b7c2ccdf9b2cd98d8">ALL_APPR</a>,(func),(iter));</td></tr>
+<tr class="separator:af8fdd3120b6502541e5c621e46e9a5f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1532f1ecd9ee5d09853368b2a290c188"><td class="memItemLeft" align="right" valign="top"><a id="a1532f1ecd9ee5d09853368b2a290c188"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>anyApprd</b>(mas,  func,  iter)&#160;&#160;&#160;AppropriateData((mas),<a class="el" href="array_8h.html#adefa58bb66a98146754068591a1b67e1a2d1eba698b2c22a31e9f017645d3f919">ANY_APPR</a>,(func),(iter));</td></tr>
+<tr class="separator:a1532f1ecd9ee5d09853368b2a290c188"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6a4ebfe233ddda7b0aa65bfcef201d9"><td class="memItemLeft" align="right" valign="top"><a id="ad6a4ebfe233ddda7b0aa65bfcef201d9"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>cntApprd</b>(mas,  func,  iter)&#160;&#160;&#160;AppropriateData((mas),<a class="el" href="array_8h.html#adefa58bb66a98146754068591a1b67e1acc6015f917f37533479cab1a1b05d069">CNT_APPR</a>,(func),(iter));</td></tr>
+<tr class="separator:ad6a4ebfe233ddda7b0aa65bfcef201d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a37c7380073dfa1b30b754f9ee8429cc3"><td class="memItemLeft" align="right" valign="top"><a id="a37c7380073dfa1b30b754f9ee8429cc3"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>filterArrl</b>(mas,  newmas,  size,  newsize,  func)&#160;&#160;&#160;<a class="el" href="array_8h.html#a90cebcdfc503e4511fd651cb1be83029">filterArr</a>((mas),(newmas),sizeof(mas[0]),(size),(newsize),(func));</td></tr>
 <tr class="separator:a37c7380073dfa1b30b754f9ee8429cc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -238,27 +241,42 @@ typedef unsigned long long&#160;</td><td class="memItemRight" valign="bottom"><a
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Функции</h2></td></tr>
-<tr class="memitem:a44806cc869ff4495418791a903b6d0d2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="array_8h.html#a44806cc869ff4495418791a903b6d0d2">aprint</a> (const void *mas, const size_t szEl, const <a class="el" href="array_8h.html#a85bed353cccbcc37f36f8f196ed33ca1">largeSize_tp</a> size1, const <a class="el" href="array_8h.html#a85bed353cccbcc37f36f8f196ed33ca1">largeSize_tp</a> size2, const char *title, void(*print)(const void *arg))</td></tr>
-<tr class="memdesc:a44806cc869ff4495418791a903b6d0d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция вывода массива  <a href="array_8h.html#a44806cc869ff4495418791a903b6d0d2">Подробнее...</a><br /></td></tr>
-<tr class="separator:a44806cc869ff4495418791a903b6d0d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b631913eac2d2abb139ef12809ebfe3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="array_8h.html#a1b631913eac2d2abb139ef12809ebfe3">aprint</a> (void *mas, const size_t szEl, const <a class="el" href="array_8h.html#a85bed353cccbcc37f36f8f196ed33ca1">largeSize_tp</a> size1, const <a class="el" href="array_8h.html#a85bed353cccbcc37f36f8f196ed33ca1">largeSize_tp</a> size2, const char *title, void(*print)(const void *arg))</td></tr>
+<tr class="memdesc:a1b631913eac2d2abb139ef12809ebfe3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция вывода массива  <a href="array_8h.html#a1b631913eac2d2abb139ef12809ebfe3">Подробнее...</a><br /></td></tr>
+<tr class="separator:a1b631913eac2d2abb139ef12809ebfe3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e73a10883fa2573a2ed8c263a87fd7f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="array_8h.html#a7e73a10883fa2573a2ed8c263a87fd7f">dprint</a> (void *data, const char *title, void(*print)(const void *arg), void *(*iterate)(void *curEl))</td></tr>
+<tr class="memdesc:a7e73a10883fa2573a2ed8c263a87fd7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция вывода структуры данных  <a href="array_8h.html#a7e73a10883fa2573a2ed8c263a87fd7f">Подробнее...</a><br /></td></tr>
+<tr class="separator:a7e73a10883fa2573a2ed8c263a87fd7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5230e62f649eeb0d92279cc2d181d7c5"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="array_8h.html#a5230e62f649eeb0d92279cc2d181d7c5">setArr</a> (void *mas, const size_t szEl, const <a class="el" href="array_8h.html#a85bed353cccbcc37f36f8f196ed33ca1">largeSize_tp</a> size, void(*setEl)(void *masEl, <a class="el" href="array_8h.html#a85bed353cccbcc37f36f8f196ed33ca1">largeSize_tp</a> num))</td></tr>
 <tr class="memdesc:a5230e62f649eeb0d92279cc2d181d7c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция изменения элементов массива в зависимости от их номеров  <a href="array_8h.html#a5230e62f649eeb0d92279cc2d181d7c5">Подробнее...</a><br /></td></tr>
 <tr class="separator:a5230e62f649eeb0d92279cc2d181d7c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af136f912a297c947ec0b3219b0c35da2"><td class="memItemLeft" align="right" valign="top"><a id="af136f912a297c947ec0b3219b0c35da2"></a>
 void *&#160;</td><td class="memItemRight" valign="bottom"><b>setArrNew</b> (void *mas, void *newmas, const size_t szEl, const <a class="el" href="array_8h.html#a85bed353cccbcc37f36f8f196ed33ca1">largeSize_tp</a> size, void(*setEl)(void *masEl, <a class="el" href="array_8h.html#a85bed353cccbcc37f36f8f196ed33ca1">largeSize_tp</a> num))</td></tr>
 <tr class="separator:af136f912a297c947ec0b3219b0c35da2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3404c27b9155fe5d7419e863aefe0ca7"><td class="memItemLeft" align="right" valign="top"><a id="a3404c27b9155fe5d7419e863aefe0ca7"></a>
+void *&#160;</td><td class="memItemRight" valign="bottom"><b>setData</b> (void *data, void(*setEl)(void *masEl, <a class="el" href="array_8h.html#a85bed353cccbcc37f36f8f196ed33ca1">largeSize_tp</a> num), void *(*iterate)(void *curEl))</td></tr>
+<tr class="separator:a3404c27b9155fe5d7419e863aefe0ca7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa7642ce7fb55cf6b224d3e9aef05abb6"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="array_8h.html#aa7642ce7fb55cf6b224d3e9aef05abb6">mapArr</a> (void *mas, const size_t szEl, const <a class="el" href="array_8h.html#a85bed353cccbcc37f36f8f196ed33ca1">largeSize_tp</a> size, void(*procEl)(void *masEl))</td></tr>
 <tr class="memdesc:aa7642ce7fb55cf6b224d3e9aef05abb6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция обработки элементов массива  <a href="array_8h.html#aa7642ce7fb55cf6b224d3e9aef05abb6">Подробнее...</a><br /></td></tr>
 <tr class="separator:aa7642ce7fb55cf6b224d3e9aef05abb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac87231e3d0b450daef47f6e649e0140a"><td class="memItemLeft" align="right" valign="top"><a id="ac87231e3d0b450daef47f6e649e0140a"></a>
 void *&#160;</td><td class="memItemRight" valign="bottom"><b>mapArrNew</b> (void *mas, void *newmas, const size_t szEl, const <a class="el" href="array_8h.html#a85bed353cccbcc37f36f8f196ed33ca1">largeSize_tp</a> size, void(*procEl)(void *masEl))</td></tr>
 <tr class="separator:ac87231e3d0b450daef47f6e649e0140a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6d65735eceb941e486a4bff9cd242b23"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="array_8h.html#a6d65735eceb941e486a4bff9cd242b23">reduceArr</a> (const void *mas, const size_t szEl, const <a class="el" href="array_8h.html#a85bed353cccbcc37f36f8f196ed33ca1">largeSize_tp</a> size, void *acc, void(*procEl)(void *acc, const void *masEl))</td></tr>
-<tr class="memdesc:a6d65735eceb941e486a4bff9cd242b23"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция редукции массива  <a href="array_8h.html#a6d65735eceb941e486a4bff9cd242b23">Подробнее...</a><br /></td></tr>
-<tr class="separator:a6d65735eceb941e486a4bff9cd242b23"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2e6bbc102686c9bdecae16b332797fc8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="array_8h.html#a2e6bbc102686c9bdecae16b332797fc8">Appropriate</a> (const void *mas, const size_t szEl, const <a class="el" href="array_8h.html#a85bed353cccbcc37f36f8f196ed33ca1">largeSize_tp</a> size, enum <a class="el" href="array_8h.html#adefa58bb66a98146754068591a1b67e1">typeAppr</a> type, enum <a class="el" href="array_8h.html#a50580ac823dfaa2b22f4c23013489ca6">checkRes</a>(*checkEl)(const void *masEl))</td></tr>
-<tr class="memdesc:a2e6bbc102686c9bdecae16b332797fc8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция возвращающая число зависящее от соответствия элементов массива функции-условию  <a href="array_8h.html#a2e6bbc102686c9bdecae16b332797fc8">Подробнее...</a><br /></td></tr>
-<tr class="separator:a2e6bbc102686c9bdecae16b332797fc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5eace3a75812a7cb37828c3e2d49234"><td class="memItemLeft" align="right" valign="top"><a id="ae5eace3a75812a7cb37828c3e2d49234"></a>
+void *&#160;</td><td class="memItemRight" valign="bottom"><b>mapData</b> (void *data, void(*procEl)(void *masEl), void *(*iterate)(void *curEl))</td></tr>
+<tr class="separator:ae5eace3a75812a7cb37828c3e2d49234"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7316a57757a23631e9501c1a0676119"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="array_8h.html#ab7316a57757a23631e9501c1a0676119">reduceArr</a> (void *mas, const size_t szEl, const <a class="el" href="array_8h.html#a85bed353cccbcc37f36f8f196ed33ca1">largeSize_tp</a> size, void *acc, void(*procEl)(void *acc, const void *masEl))</td></tr>
+<tr class="memdesc:ab7316a57757a23631e9501c1a0676119"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция редукции массива  <a href="array_8h.html#ab7316a57757a23631e9501c1a0676119">Подробнее...</a><br /></td></tr>
+<tr class="separator:ab7316a57757a23631e9501c1a0676119"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f33b761ca2556327bca7ab067f5bb25"><td class="memItemLeft" align="right" valign="top"><a id="a0f33b761ca2556327bca7ab067f5bb25"></a>
+void *&#160;</td><td class="memItemRight" valign="bottom"><b>reduceData</b> (void *data, void *acc, void(*procEl)(void *acc, const void *masEl), void *(*iterate)(void *curEl))</td></tr>
+<tr class="separator:a0f33b761ca2556327bca7ab067f5bb25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4cfae435f6f5e547738d0bb0c762962f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="array_8h.html#a4cfae435f6f5e547738d0bb0c762962f">Appropriate</a> (void *mas, const size_t szEl, const <a class="el" href="array_8h.html#a85bed353cccbcc37f36f8f196ed33ca1">largeSize_tp</a> size, enum <a class="el" href="array_8h.html#adefa58bb66a98146754068591a1b67e1">typeAppr</a> type, enum <a class="el" href="array_8h.html#a50580ac823dfaa2b22f4c23013489ca6">checkRes</a>(*checkEl)(const void *masEl))</td></tr>
+<tr class="memdesc:a4cfae435f6f5e547738d0bb0c762962f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция возвращающая число зависящее от соответствия элементов массива функции-условию  <a href="array_8h.html#a4cfae435f6f5e547738d0bb0c762962f">Подробнее...</a><br /></td></tr>
+<tr class="separator:a4cfae435f6f5e547738d0bb0c762962f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a827ea817d660d522cec652402ba458b0"><td class="memItemLeft" align="right" valign="top"><a id="a827ea817d660d522cec652402ba458b0"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>AppropriateData</b> (void *data, enum <a class="el" href="array_8h.html#adefa58bb66a98146754068591a1b67e1">typeAppr</a> type, enum <a class="el" href="array_8h.html#a50580ac823dfaa2b22f4c23013489ca6">checkRes</a>(*checkEl)(const void *masEl), void *(*iterate)(void *curEl))</td></tr>
+<tr class="separator:a827ea817d660d522cec652402ba458b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a90cebcdfc503e4511fd651cb1be83029"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="array_8h.html#a90cebcdfc503e4511fd651cb1be83029">filterArr</a> (void *mas, void *newmas, const size_t szEl, const <a class="el" href="array_8h.html#a85bed353cccbcc37f36f8f196ed33ca1">largeSize_tp</a> size, <a class="el" href="array_8h.html#a85bed353cccbcc37f36f8f196ed33ca1">largeSize_tp</a> *newsize, enum <a class="el" href="array_8h.html#a50580ac823dfaa2b22f4c23013489ca6">checkRes</a>(*checkEl)(const void *masEl))</td></tr>
 <tr class="memdesc:a90cebcdfc503e4511fd651cb1be83029"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция фильтрующая массив по определённому условию  <a href="array_8h.html#a90cebcdfc503e4511fd651cb1be83029">Подробнее...</a><br /></td></tr>
 <tr class="separator:a90cebcdfc503e4511fd651cb1be83029"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -364,12 +382,14 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>mulArraysEl</b> (cons
     <tr><td class="paramname">mas</td><td>(или же mas1 и mas2) - это указатели на обрабатывемые функцией массивы. </td></tr>
     <tr><td class="paramname">newmas</td><td>- это указатель на массив в который будет записываться результат. </td></tr>
     <tr><td class="paramname">szEl</td><td>- это размер обрабатываемого элемента массива. </td></tr>
-    <tr><td class="paramname">size</td><td>(или же size1 и size2 или newsize) - это число элементов в массиве.</td></tr>
+    <tr><td class="paramname">size</td><td>(или же size1 и size2 или newsize) - это число элементов в массиве. </td></tr>
+    <tr><td class="paramname">iterate</td><td>- указатель на функцию возвращающую адрес следующего элементаы, NULL - стоп-символ.</td></tr>
   </table>
   </dd>
 </dl>
 <p>Значение суффиксов для функций:<br  />
-New - означает что при работе результат будет записываться в новый массив. </p><dl class="section warning"><dt>Предупреждения</dt><dd>Память под новый массив должна быть выделена!</dd></dl>
+New - означает что при работе результат будет записываться в новый массив.<br  />
+Data - означает работу с любой структурой данных и принятие функции итерации как параметра. </p><dl class="section warning"><dt>Предупреждения</dt><dd>Память под новый массив должна быть выделена!</dd></dl>
 <p>Значение суффиксов для макросов:<br  />
 l(буква) - означает работу с одномерным массивом. </p><dl class="section warning"><dt>Предупреждения</dt><dd>Работа с двумерным массивом с помощью макросов с суффиксом l приведёт к сбою!</dd></dl>
 <p>t - означает работу с двумерным массивом.<br  />
@@ -378,7 +398,8 @@ n - означает что при работе результат будет з
 f - означает работу с типом float.<br  />
 d - означает работу с типом double.<br  />
 e - означает работу с типом double в экспоненциальном виде.<br  />
-c - означает работу с типом complex. </p>
+c - означает работу с типом complex.<br  />
+d - означает работу с либой структурой данных. </p>
 </div><h2 class="groupheader">Макросы</h2>
 <a id="a2ed61d738bf2d9720358f26e3229ecdb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2ed61d738bf2d9720358f26e3229ecdb">&#9670;&nbsp;</a></span>mapArrMcr</h2>
@@ -547,8 +568,8 @@ c - означает работу с типом complex. </p>
 </div>
 </div>
 <h2 class="groupheader">Функции</h2>
-<a id="a2e6bbc102686c9bdecae16b332797fc8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2e6bbc102686c9bdecae16b332797fc8">&#9670;&nbsp;</a></span>Appropriate()</h2>
+<a id="a4cfae435f6f5e547738d0bb0c762962f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4cfae435f6f5e547738d0bb0c762962f">&#9670;&nbsp;</a></span>Appropriate()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -556,7 +577,7 @@ c - означает работу с типом complex. </p>
         <tr>
           <td class="memname">int Appropriate </td>
           <td>(</td>
-          <td class="paramtype">const void *&#160;</td>
+          <td class="paramtype">void *&#160;</td>
           <td class="paramname"><em>mas</em>, </td>
         </tr>
         <tr>
@@ -607,8 +628,8 @@ c - означает работу с типом complex. </p>
 
 </div>
 </div>
-<a id="a44806cc869ff4495418791a903b6d0d2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a44806cc869ff4495418791a903b6d0d2">&#9670;&nbsp;</a></span>aprint()</h2>
+<a id="a1b631913eac2d2abb139ef12809ebfe3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b631913eac2d2abb139ef12809ebfe3">&#9670;&nbsp;</a></span>aprint()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -616,7 +637,7 @@ c - означает работу с типом complex. </p>
         <tr>
           <td class="memname">void aprint </td>
           <td>(</td>
-          <td class="paramtype">const void *&#160;</td>
+          <td class="paramtype">void *&#160;</td>
           <td class="paramname"><em>mas</em>, </td>
         </tr>
         <tr>
@@ -666,6 +687,56 @@ c - означает работу с типом complex. </p>
   </dd>
 </dl>
 <p>Функция предназначена для форматированного вывода одномерного или двумерного массива. </p>
+
+</div>
+</div>
+<a id="a7e73a10883fa2573a2ed8c263a87fd7f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e73a10883fa2573a2ed8c263a87fd7f">&#9670;&nbsp;</a></span>dprint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void dprint </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>title</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void(*)(const void *arg)&#160;</td>
+          <td class="paramname"><em>print</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *(*)(void *curEl)&#160;</td>
+          <td class="paramname"><em>iterate</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Функция вывода структуры данных </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">title</td><td>Указатель на строку заголовка печатаемой структуры данных. </td></tr>
+    <tr><td class="paramname">print</td><td>Указатель на функцию печатающую элемент определённого типа.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Функция предназначена для форматированного вывода структуры данных. </p>
 
 </div>
 </div>
@@ -846,8 +917,8 @@ c - означает работу с типом complex. </p>
 
 </div>
 </div>
-<a id="a6d65735eceb941e486a4bff9cd242b23"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6d65735eceb941e486a4bff9cd242b23">&#9670;&nbsp;</a></span>reduceArr()</h2>
+<a id="ab7316a57757a23631e9501c1a0676119"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7316a57757a23631e9501c1a0676119">&#9670;&nbsp;</a></span>reduceArr()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -855,7 +926,7 @@ c - означает работу с типом complex. </p>
         <tr>
           <td class="memname">void* reduceArr </td>
           <td>(</td>
-          <td class="paramtype">const void *&#160;</td>
+          <td class="paramtype">void *&#160;</td>
           <td class="paramname"><em>mas</em>, </td>
         </tr>
         <tr>
