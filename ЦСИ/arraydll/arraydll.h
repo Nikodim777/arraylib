@@ -27,8 +27,10 @@ extern "C"
     \param newmas - это указатель на массив в который будет записываться результат.
     \param szEl - это размер обрабатываемого элемента массива.
     \param size (или же size1 и size2 или newsize) - это число элементов в массиве.
+    \param iterate - указатель на функцию возвращающую адрес следующего элементаы, NULL - стоп-символ
     \details Значение суффиксов для функций:\n
-    New - означает что при работе результат будет записываться в новый массив.
+    New - означает что при работе результат будет записываться в новый массив.\n
+    Data - означает работу с любой структурой данных и принятие функции итерации как параметра
     \warning Память под новый массив должна быть выделена!
     \details Значение суффиксов для макросов:\n
     l(буква) - означает работу с одномерным массивом.
@@ -41,6 +43,7 @@ extern "C"
     d - означает работу с типом double.\n
     e - означает работу с типом double в экспоненциальном виде.\n
     c - означает работу с типом complex.
+    d - означает работу с либой структурой данных
 */
 
 #include <memory.h>
@@ -73,7 +76,7 @@ void printCmplx(const void *arg);
 * \param print Указатель на функцию печатающую элемент определённого типа.
 * \details Функция предназначена для форматированного вывода одномерного или двумерного массива.
 */
-void aprint(const void *mas, const size_t szEl, const largeSize_tp size1, const largeSize_tp size2, const char *title,
+void aprint(void *mas, const size_t szEl, const largeSize_tp size1, const largeSize_tp size2, const char *title,
             void (*print)(const void *arg));
 /*Макросы вывода двумерного массива определённого типа*/
 #define aprinti(mas,size1,size2,title) aprint((mas),sizeof(int),(size1),(size2),(title),printInt);
@@ -91,6 +94,13 @@ void aprint(const void *mas, const size_t szEl, const largeSize_tp size1, const 
 #define aprintld(mas,size,title) aprint((mas),sizeof(double),1,(size),(title),printDbl);
 #define aprintle(mas,size,title) aprint((mas),sizeof(double),1,(size),(title),printExp);
 #define aprintlc(mas,size,title) aprint((mas),sizeof(double complex),1,(size),(title),printCmplx);
+/**
+* \brief Функция вывода структуры данных
+* \param title Указатель на строку заголовка печатаемой структуры данных.
+* \param print Указатель на функцию печатающую элемент определённого типа.
+* \details Функция предназначена для форматированного вывода структуры данных.
+*/
+void dprint(void *data, const char *title, void (*print)(const void *arg), void* (*iterate)(void *curEl));
 
 /** @name Вспомогательные функции для заполнения массива
 * \brief Предустановленные вспомогательные функции для заполнения массива
@@ -139,6 +149,9 @@ void *setArrNew(void *mas, void *newmas, const size_t szEl, const largeSize_tp s
 #define setArrRnd(mas,size) setArr((mas),sizeof(int),(size),setRnd);
 #define setArrDblRnd(mas,size) setArr((mas),sizeof(double),(size),setDblRnd);
 /** @} */
+/*Функция заполнения структуры данных*/
+void *setData(void *data, void (*setEl)(void* masEl, largeSize_tp num), void* (*iterate)(void *curEl));
+
 
 /**
 * \brief Макроопределение функции обработки массива для простых функций обработки
@@ -164,6 +177,8 @@ void *mapArrNew(void *mas, void *newmas, const size_t szEl, const largeSize_tp s
 /*Макрос обработки элементов двумерного массива*/
 #define mapArrt(mas,size,func) mapArr((mas),sizeof(mas[0][0]),(size),(func));
 #define mapArrtn(mas,newmas,size,func) mapArrNew((mas),(newmas),sizeof(mas[0][0]),(size),(func));
+/*Функция обработки элементов структуры данных*/
+void *mapData(void *data, void (*procEl)(void *masEl), void* (*iterate)(void *curEl));
 
 /** @name Вспомогательные макросы редукции массива
 * \brief Макросы суммирования и перемножения элементов массива
@@ -207,12 +222,14 @@ void mulDblArrEl(void *acc, const void *masEl);
 * и изменяет аккумулятор определённым образом.
 * \result Возвращает указатель на аккумулятор
 */
-void *reduceArr(const void *mas, const size_t szEl, const largeSize_tp size, void *acc,
+void *reduceArr(void *mas, const size_t szEl, const largeSize_tp size, void *acc,
                 void (*procEl)(void *acc, const void *masEl));
 /*Макрос редукции одномерного массива*/
 #define reduceArrl(mas,size,acc,func) reduceArr((mas),sizeof(mas[0]),(size),(acc),(func));
 /*Макрос редукции двумерного массива*/
 #define reduceArrt(mas,size,acc,func) reduceArr((mas),sizeof(mas[0][0]),(size),(acc),(func));
+/*Функция редукции элементов структуры данных*/
+void *reduceData(void *data, void *acc, void (*procEl)(void *acc, const void *masEl), void* (*iterate)(void *curEl));
 
 /** Перечисление хранящее результат соответствия элементов массива некоторому условию*/
 enum checkRes {
@@ -234,7 +251,7 @@ enum typeAppr {
 * \result Возвращает или признак соответствия/несоответствия или число соответствующих элементов\n
 * в зависимости от типа соответствия
 */
-int Appropriate(const void *mas, const size_t szEl, const largeSize_tp size, enum typeAppr type,
+int Appropriate(void *mas, const size_t szEl, const largeSize_tp size, enum typeAppr type,
                 enum checkRes (*checkEl)(const void *masEl));
 /*Макрос проверяющая все ли элементы массива соответствуют функции-условию*/
 #define allApprl(mas,size,func) Appropriate((mas),sizeof(mas[0]),(size),ALL_APPR,(func));
@@ -245,6 +262,13 @@ int Appropriate(const void *mas, const size_t szEl, const largeSize_tp size, enu
 /*Макрос подсчитывающая число элементов массива соответствующих функции-условию*/
 #define cntApprl(mas,size,func) Appropriate((mas),sizeof(mas[0]),(size),CNT_APPR,(func));
 #define cntApprt(mas,size,func) Appropriate((mas),sizeof(mas[0][0]),(size),CNT_APPR,(func));
+int AppropriateData(void *data, enum typeAppr type, enum checkRes (*checkEl)(const void *masEl), void* (*iterate)(void *curEl));
+/*Макрос проверяющая все ли элементы массива соответствуют функции-условию*/
+#define allApprd(mas,func,iter) AppropriateData((mas),ALL_APPR,(func),(iter));
+/*Макрос проверяющая есть ли элементы массива соответствующие функции-условию*/
+#define anyApprd(mas,func,iter) AppropriateData((mas),ANY_APPR,(func),(iter));
+/*Макрос подсчитывающая число элементов массива соответствующих функции-условию*/
+#define cntApprd(mas,func,iter) AppropriateData((mas),CNT_APPR,(func),(iter));
 
 /**
 * \brief Функция фильтрующая массив по определённому условию
@@ -291,7 +315,7 @@ void mulArraysEl(const void *masEl1, const void *masEl2, void *resEl, largeSize_
 * \result Возвращает указатель на массив-результат.
 */
 void *procArrays(void *mas1, void *mas2, void *newmas, const size_t szEl, const largeSize_tp size,
-                void (*procEl)(const void *masEl1, const void *masEl2, void *resEl, largeSize_tp num));
+                 void (*procEl)(const void *masEl1, const void *masEl2, void *resEl, largeSize_tp num));
 /*Макросы функций вычисления массива по элементам и номеру элементов двух других массивов*/
 #define procArraysl(mas1,mas2,newmas,size,func) procArrays((mas1),(mas2),(newmas),sizeof(mas1[0]),(size),(func));
 #define procArrayst(mas1,mas2,newmas,size,func) procArrays((mas1),(mas2),(newmas),sizeof(mas1[0][0]),(size),(func));

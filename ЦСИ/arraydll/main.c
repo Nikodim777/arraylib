@@ -26,16 +26,26 @@ void DLL_EXPORT printCmplx(const void *arg)
     printf("%.3f+%.3f*i\t", creal(*(double complex*)arg), cimag(*(double complex*)arg));
 }
 
-void DLL_EXPORT aprint(const void *mas, const size_t szEl, const largeSize_tp n, const largeSize_tp m, const char *title, void (*print)(const void *arg))
+void DLL_EXPORT aprint(void *mas, const size_t szEl, const largeSize_tp size1, const largeSize_tp size2, const char *title, void (*print)(const void *arg))
 {
     long long i, j;
     printf("%s\n", title);
-    for(i = 0; i < n; i++) {
-        for(j = 0; j < m; j++, mas += szEl) {
+    for(i = 0; i < size1; i++) {
+        for(j = 0; j < size2; j++, mas += szEl) {
             print(mas);
         }
         printf("\n");
     }
+}
+
+void DLL_EXPORT dprint(void *data, const char *title, void (*print)(const void *arg), void* (*iterate)(void *curEl))
+{
+    printf("%s\n", title);
+    while(data) {
+        print(data);
+        data = iterate(data);
+    }
+    printf("\n");
 }
 
 
@@ -80,6 +90,16 @@ void* DLL_EXPORT setArrNew(void *mas, void *newmas, const size_t szEl, const lar
     return tmpptr;
 }
 
+void* DLL_EXPORT setData(void *data, void (*setEl)(void* masEl, largeSize_tp num), void* (*iterate)(void *curEl))
+{
+    long long i;
+    void *tmpptr = data;
+    for(i = 0; (data = iterate(data)); i++) {
+        setEl(data, i);
+    }
+    return tmpptr;
+}
+
 
 
 
@@ -106,6 +126,16 @@ void* DLL_EXPORT mapArrNew(void *mas, void *newmas, const size_t szEl, const lar
     return tmpptr;
 }
 
+void* DLL_EXPORT mapData(void *data, void (*procEl)(void *masEl), void* (*iterate)(void *curEl))
+{
+    void *tmpptr = data;
+    while(data) {
+        procEl(data);
+        data = iterate(data);
+    }
+    return tmpptr;
+}
+
 
 
 
@@ -126,7 +156,7 @@ void DLL_EXPORT mulDblArrEl(void *acc, const void *masEl)
     *(double*)acc *= *(double*)masEl;
 }
 
-void* DLL_EXPORT reduceArr(const void *mas, const size_t szEl, const largeSize_tp size, void *acc, void (*procEl)(void *acc, const void *masEl))
+void* DLL_EXPORT reduceArr(void *mas, const size_t szEl, const largeSize_tp size, void *acc, void (*procEl)(void *acc, const void *masEl))
 {
     long long i;
     for(i = 0; i < size; i++, mas += szEl) {
@@ -135,10 +165,19 @@ void* DLL_EXPORT reduceArr(const void *mas, const size_t szEl, const largeSize_t
     return acc;
 }
 
+void* DLL_EXPORT reduceData(void *data, void *acc, void (*procEl)(void *acc, const void *masEl), void* (*iterate)(void *curEl))
+{
+    while(data) {
+        procEl(acc, data);
+        data = iterate(data);
+    }
+    return acc;
+}
 
 
 
-int DLL_EXPORT Appropriate(const void *mas, const size_t szEl, const largeSize_tp size, enum typeAppr type, enum checkRes (*checkEl)(const void *masEl))
+
+int DLL_EXPORT Appropriate(void *mas, const size_t szEl, const largeSize_tp size, enum typeAppr type, enum checkRes (*checkEl)(const void *masEl))
 {
     long long i;
     long long tmp;
@@ -157,6 +196,30 @@ int DLL_EXPORT Appropriate(const void *mas, const size_t szEl, const largeSize_t
         } else if(type == CNT_APPR) {
             tmp += checkEl(mas);
         }
+
+    return tmp;
+}
+
+int DLL_EXPORT AppropriateData(void *data, enum typeAppr type, enum checkRes (*checkEl)(const void *masEl), void* (*iterate)(void *curEl))
+{
+    long long tmp;
+
+    if(type == ALL_APPR) {
+        tmp = 1;
+    } else {
+        tmp = 0;
+    }
+
+    while(data){
+        if(type == ALL_APPR) {
+            tmp &= checkEl(data);
+        } else if(type == ANY_APPR) {
+            tmp |= checkEl(data);
+        } else if(type == CNT_APPR) {
+            tmp += checkEl(data);
+        }
+        data = iterate(data);
+    }
 
     return tmp;
 }
