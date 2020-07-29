@@ -22,10 +22,28 @@ struct Person {
     unsigned age;
 };
 
+struct CityList{
+    char name[20];
+    int popul;
+    struct CityList *next;
+};
+
+//Пользовательская функция итерации для списка
+void* iterCities(void* curEl)
+{
+    return ((struct CityList*)curEl)->next;
+}
+
 //Пользовательская функция для вывода структуры
 void printPers(const void *arg)
 {
     printf("Возраст человека по имени %s - %d\n", (*(struct Person*)arg).name, (*(struct Person*)arg).age);
+}
+
+//Пользовательская функция для вывода элемента списка
+void printCity(const void *arg)
+{
+    printf("В городе %s численность населения равна %dK\n", (*(struct CityList*)arg).name, (*(struct CityList*)arg).popul);
 }
 
 //Пользовательские функции для заполнения массива
@@ -53,9 +71,19 @@ void growOld(void *masEl){
     ((struct Person*)masEl)->age +=10;
 }
 
+//Пользовательская функция для обработки элемента списка
+void growPop(void *masEl){
+    ((struct CityList*)masEl)->popul +=10;
+}
+
 //Пользовательские функции для редукции массива
 void sumAge(void *acc, const void *masEl){
     *(int*)acc += ((struct Person*)masEl)->age;
+}
+
+//Пользовательская функция для редукции списка
+void sumPop(void *acc, const void *masEl){
+    *(int*)acc += ((struct CityList*)masEl)->popul;
 }
 
 //Функции условия (должны возвращать RES_NOT или RES_OK)
@@ -73,6 +101,14 @@ enum checkRes lessMillion(const void *masEl){
 }
 enum checkRes olderFifty(const void *masEl){
     if(((struct Person*)masEl)->age > 30)
+        return RES_OK;
+    else
+        return RES_NOT;
+}
+
+//Функция соответствия условию для списка (название города начинается с буквы А)
+enum checkRes beginWithA(const void *masEl){
+    if(((struct CityList*)masEl)->name[0] == 'А')
         return RES_OK;
     else
         return RES_NOT;
@@ -124,6 +160,18 @@ int main()
         {"Дарья", 82}
     };
 
+    //Создание и инициализация списка
+    struct CityList* cities = (struct CityList*) malloc(sizeof(struct CityList));
+    strcpy(cities->name,"Москва");
+    cities->popul = 12000;
+    cities->next = (struct CityList*) malloc(sizeof(struct CityList));
+    strcpy(cities->next->name,"Астрахань");
+    cities->next->popul = 4000;
+    cities->next->next = (struct CityList*) malloc(sizeof(struct CityList));
+    strcpy(cities->next->next->name,"Сызрань");
+    cities->next->next->popul = 580;
+    cities->next->next->next = NULL; //Лучше указать явно
+
 
     //Тест вывода различных массивов
     aprintli(masi, SZMI, "Массив int:");
@@ -143,15 +191,20 @@ int main()
 
     aprint(persons, sizeof(persons[0]), 1, SZPR, "Массив данных о людях:", printPers);
 
+    dprint(cities, "Список данных о городах:", printCity, iterCities);
+
     //Тест функций обработки массива
     mapArrMcr(masi,SZMI,exp);
     mapArr(masf,sizeof(masf[0]),SZMF,squareFlt);
     mapArrl(persons,SZPR,growOld);
+    //Тест функции обработки списка
+    mapData(cities, growPop, iterCities);
 
     //Вывод результатов
     aprintli(masi, SZMI, "Экспоненцированный массив int:");
     aprintlf(masf, SZMF, "Возведённый в квадрат массив float:");
     aprintl(persons, SZPR, "Массив данных о состарившихся людях:", printPers);
+    dprint(cities, "Список данных о выросших городах:", printCity, iterCities);
 
     //Тест функций редукции
     int acci;
@@ -163,8 +216,12 @@ int main()
     printf("Произведение элементов массива double - %f\n",accd);
 
     int accp = 0;
-    reduceArrl(persons,SZPR,&accp,sumAge);
+    reduceArrl(persons, SZPR, &accp, sumAge);
     printf("Средний возраст людей - %.3f\n",(float)accp/SZPR);
+
+    int accc = 0;
+    reduceData(cities, &accc, sumPop, iterCities);
+    printf("Суммарная численность населения - %d\n",accc);
     printf("\n");
 
     //Тест функций возвращающих число зависящее от соответствия элементов массива функции-условию
@@ -176,6 +233,9 @@ int main()
 
     int resp = cntApprl(persons,SZPR,olderFifty);
     printf("Число людей старше 30 - %d\n",resp);
+
+    int resc = anyApprd(cities, beginWithA, iterCities);
+    printf("Есть ли города с буквы А - %d\n",resc);
     printf("\n");
 
     //Тест функций фильтраций
